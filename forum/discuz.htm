@@ -28,7 +28,7 @@
 			<div class="col-xs-11 hot_con_wrap">
 				<div class="hot_con">
 					<div class="title">
-						<a class="title_1 h4" href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra">$thread[subject]</a>
+						<a class="title_1 h4" $thread['highlight'] href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra">$thread[subject]</a>
 						
 						<!--{if $thread['digest']}-->
 						<span class="label label-warning">精华</span>
@@ -37,10 +37,9 @@
 					<div class="pull-left">
 						<ul class="user">
 							<li>$thread[dateline]</li>
-							<li class="vip">
+							<li class="vip" $thread['highlight']>
 								<i class="fa fa-vimeo" aria-hidden="true"></i>
-							</li>
-							<li>$thread['highlight']</li>
+							</li> 
 							<li>$thread[author]</li>
 						</ul>
 					</div>
