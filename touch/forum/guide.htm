@@ -1,0 +1,20 @@
+<!--{template common/header}-->
+ 
+<!-- main threadlist start -->
+<!--帖子列表**开始 -->
+<div class="container content">
+<div class="threadlist"> 
+	<h2 class="thread_tit">最新帖子:</h2>
+
+	<!--{loop $data $key $list}-->
+		<!--{subtemplate forum/guide_list_row}-->
+	<!--{/loop}-->
+
+</div>
+<!-- main threadlist end -->
+</div>
+<!--帖子列表**结束 -->
+$multipage
+
+<div class="pullrefresh" style="display:none;"></div>
+<!--{template common/footer}-->

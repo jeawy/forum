@@ -1,0 +1,45 @@
+<!--{template common/header}-->
+
+<!-- main collectlist start -->
+<div class="container content">
+<!--{if $_GET['type'] == 'forum'}-->
+<div class="coll_list b_radius">
+	<table>
+		<!--{if $list}-->
+			<!--{loop $list $k $value}-->
+		    	<tr class="thread-tr"> 
+					<td>
+					  <img class="list-user-img-thread " src="uc_server/avatar.php?uid=$thread[authorid]&size=middle"/></td>
+					</td>
+			 
+			         <td class="thread-td"><a href="$value[url]">$value[title]</a></td>
+				</tr>
+			<!--{/loop}-->
+		<!--{else}-->
+		<td>{lang no_favorite_yet}</td>
+		<!--{/if}-->
+		
+
+	</table>
+</div>
+<!--{else}-->
+<div class="threadlist">
+	<table class="hotlist">
+		<!--{if $list}-->
+			<!--{loop $list $k $value}-->
+			<tr class="thread-tr"> 
+			 <td> <img class="list-user-img-thread " src="uc_server/avatar.php?uid=$value[authorid]&size=middle"/></td>
+			 <td class="thread-td"><a href="$value[url]">$value[title]</a></td>
+	     	</tr>
+			<!--{/loop}-->
+		<!--{else}-->
+		<td>{lang no_favorite_yet}</td>
+		<!--{/if}-->
+	</table>
+</div>
+<!--{/if}-->
+</div>
+<!-- main collectlist end -->
+$multi
+<!--{eval $nofooter = true;}-->
+<!--{template common/footer}-->
