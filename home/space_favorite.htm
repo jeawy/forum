@@ -2,8 +2,6 @@
 <!--{template common/header}-->
 <link rel="stylesheet" href="{$_G['own_static_path']}/css/set.css">
 <div  class="col-xs-2 leftsidebar">
-	 
-				<div class="tbn">
 					<h2 class="leftsidebar_title">{lang favorite}</h2>
 					<div class="leftsidebar_list">
 						<div$actives[all]><a href="home.php?mod=space&do=favorite&type=all">{lang favorite_all}</a></div>
@@ -15,7 +13,6 @@
 						<!--{if helper_access::check_module('portal')}--><div$actives[article]><a href="home.php?mod=space&do=favorite&type=article">{lang favorite_article}</a></div><!--{/if}-->
 						<!--{hook/space_favorite_nav_extra}-->
 					</div>
-				</div> 
 </div>
 <div class="col-xs-10 personal_data">
 		 
