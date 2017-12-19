@@ -6,18 +6,25 @@
 									<img class="list-user-img-thread " src="uc_server/avatar.php?uid=$thread[authorid]&size=middle"/>
 								  </td>
 								  <td class="thread-td">
+									 
 									<a href="forum.php?mod=viewthread&tid=$thread[tid]&fromguid=hot&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra">
 										<!--{if !$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])}-->
 												<!--{eval $thread[tid]=$thread[closed];}-->
 										<!--{/if}-->
 										$thread[typehtml] $thread[sorthtml]
 										$thread[subject]
-										<span class="by">$thread[author]   $thread[dateline]  </span>
-										<div class="pull-right user_nub">
-												<i class="fa fa-eye" aria-hidden="true"></i>{$thread[views]}
-												
-												<i class="fa fa-commenting fa-magin" aria-hidden="true"></i>{$thread[replies]} 
-										</div>
+										
+										<span class="by">	$thread[author]
+											$thread[dateline] 
+											<div class="pull-right user_nub">
+													
+											<i class="fa fa-eye" aria-hidden="true"></i>{$thread[views]}
+											
+											<i class="fa fa-commenting fa-magin" aria-hidden="true"></i>{$thread[replies]}</div>
+										</span>
+										
+											
+										</ul>
 									 
 									</a>
 								  </td>
