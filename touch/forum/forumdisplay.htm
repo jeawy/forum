@@ -1,6 +1,13 @@
 <!--{template common/header}-->
 <!-- header start -->
-
+<style>
+	.left_subnav{
+		margin-top: 10px;
+	}
+	.left_subnav .pull-right{
+		line-height: 30px;
+	}
+</style>
 <link rel="stylesheet" href="{$_G['own_static_path']}/css/m_css/m_home.css">
 <!-- 板块标题**开始 -->
 <!--{if $_G[fid] == 38}-->
@@ -74,11 +81,11 @@
                         </div>
                         <div class="pull-right">
 								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=hot" class="xi2{if $_GET['filter'] == 'hot'} xw1{/if}">{lang hot_thread}</a>
-							 
+							 |
 								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=lastpost&orderby=lastpost$forumdisplayadd[lastpost]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="xi2{if $_GET['filter'] == 'lastpost'} xw1{/if}">
 									<span  class="reply">{lang latest}</span>
 								</a>
-							 
+							   |
 								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=digest&digest=1$forumdisplayadd[digest]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="xi2{if $_GET['filter'] == 'digest'} xw1{/if}">
 									<span class="reply">{lang digest_posts} </span>
 								</a> 
