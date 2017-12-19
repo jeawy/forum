@@ -1,4 +1,4 @@
-<div class="tl">
+<div >
 	<div class="sttl mbn">
 		<h2><!--{if $keyword}-->{lang search_result_keyword} <!--{if $modfid}--><a href="forum.php?mod=modcp&action=thread&fid=$modfid&keywords=$modkeyword&submit=true&do=search&page=$page" target="_blank">{lang goto_memcp}</a><!--{/if}--><!--{else}-->{lang search_result}<!--{/if}--></h2>
 	</div>
@@ -6,7 +6,7 @@
 	<!--{if empty($threadlist)}-->
 		<p class="emp xs2 xg2">{lang search_nomatch}</p>
 	<!--{else}-->
-		<div class="slst mtw" id="threadlist" {if $modfid} style="position: relative;"{/if}>
+		<div class="  mtw" id="threadlist" {if $modfid} style="position: relative;"{/if}>
 			<!--{if $modfid}-->
 			<form method="post" autocomplete="off" name="moderate" id="moderate" action="forum.php?mod=topicadmin&action=moderate&fid=$modfid&infloat=yes&nopost=yes">
 			<!--{/if}-->
@@ -39,6 +39,7 @@
 						<span><a href="forum.php?mod=forumdisplay&fid=$thread[fid]" target="_blank" class="xi1">$thread[forumname]</a></span>
 					</p>
 				</li>
+				<hr>
 				<!--{/loop}-->
 			</ul>
 		<!--{if $modfid}-->
@@ -48,5 +49,5 @@
 		<!--{/if}-->
 		</div>
 	<!--{/if}-->
-	<!--{if !empty($multipage)}--><div class="pgs cl mbm">$multipage</div><!--{/if}-->
+	<!--{if !empty($multipage)}--><div class="text-center">$multipage</div><!--{/if}-->
 </div>
