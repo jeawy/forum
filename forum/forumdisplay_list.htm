@@ -101,7 +101,7 @@
 										</div>
 										<div class="col-xs-11 hot_con_wrap">
 											<div class="hot_con">
-												<div class="title"><a class="title_1 h4" href="">
+												<div class="title">
 														
 																<a href="javascript:;" id="content_$thread[tid]" class="showcontent y" title="{lang content_actions}" onclick="CONTENT_TID='$thread[tid]';CONTENT_ID='$thread[id]';showMenu({'ctrlid':this.id,'menuid':'content_menu'})"></a>
 																<!--{if in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
@@ -120,7 +120,7 @@
 																<!--{if $thread['moved']}-->
 																	{lang thread_moved}:<!--{eval $thread[tid]=$thread[closed];}-->
 																<!--{/if}-->
-																<a href="forum.php?mod=viewthread&tid=$thread[tid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra"$thread[highlight]{if $thread['isgroup'] == 1 || $thread['forumstick']} target="_blank"{else} onclick="atarget(this)"{/if} class="s xst">$thread[subject]</a>
+																<a href="forum.php?mod=viewthread&tid=$thread[tid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra"$thread[highlight]{if $thread['isgroup'] == 1 || $thread['forumstick']} target="_blank"{else} onclick="atarget(this)"{/if} class="title_1">$thread[subject]</a>
 																<!--{if $_G['setting']['threadhidethreshold'] && $thread['hidden'] >= $_G['setting']['threadhidethreshold']}--><span class="xg1">{lang hidden}</span>&nbsp;<!--{/if}-->
 																<!--{if $thread[icon] >= 0}-->
 																	<img src="{STATICURL}image/stamp/{$_G[cache][stamps][$thread[icon]][url]}" alt="{$_G[cache][stamps][$thread[icon]][text]}" align="absmiddle" />
@@ -183,7 +183,7 @@
 																	<!--{/if}-->
 																<!--{/if}-->
 															
-													</a>
+													
 													
 													{if $thread['displayorder'] == 1}<span class="label label-danger">置顶</span>{/if}
 												</div>
@@ -200,7 +200,7 @@
 													<!--{if $thread['isgroup'] != 1}-->$thread[views]
 													<!--{else}-->{$groupnames[$thread[tid]][views]}
 													<!--{/if}-->
-													<i class="fa fa-commenting my_fa" aria-hidden="true"> $thread[allreplies]</i>
+													<i class="fa fa-commenting my_fa" aria-hidden="true"></i> $thread[allreplies]
 												</div>
 											</div>
 									    </div>
