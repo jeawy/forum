@@ -12,8 +12,12 @@
 										<!--{/if}-->
 										$thread[typehtml] $thread[sorthtml]
 										$thread[subject]
-										<span class="by">$thread[author]</span>
-										<span class="num"><!--{if $thread['isgroup'] != 1}-->$thread[replies]<!--{else}-->{$groupnames[$thread[tid]][replies]}<!--{/if}--></span>
+										<span class="by">$thread[author]   $thread[dateline]  </span>
+										<div class="pull-right user_nub">
+												<i class="fa fa-eye" aria-hidden="true"></i>{$thread[views]}
+												
+												<i class="fa fa-commenting fa-magin" aria-hidden="true"></i>{$thread[replies]} 
+										</div>
 									 
 									</a>
 								  </td>
