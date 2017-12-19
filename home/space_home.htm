@@ -1,37 +1,30 @@
 <!--{if empty($diymode)}-->
 	<!--{template common/header}-->
-    
-	<div id="pt" class="bm cl">
-		<div class="z">
-			<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
-			<!--{if $_G[setting][homestyle]}--><a href="home.php">$_G[setting][navs][4][navname]</a><!--{else}-->{lang feed}</a><!--{/if}-->
-		</div>
-	</div>
-
+    <link rel="stylesheet" href="{$_G['own_static_path']}/css/information.css">
+	<link rel="stylesheet" href="{$_G['own_static_path']}/css/set.css">
+	 
 	<!--{if $_G[setting][homestyle]}--><!--{ad/text/wp a_t}--><!--{/if}-->
 	<style id="diy_style" type="text/css"></style>
-	<div class="wp">
-		<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
-	</div>
+	 
 
-	<div id="ct" class="{if $_G[setting][homestyle]}ct3_a{else}ct2_a{/if} wp cl">
+	<div   class="row">
 
-		<div class="appl">
+		<div class="col-xs-2 leftsidebar">
 			<!--{if $_G[setting][homestyle]}-->
 				<!--{template common/userabout}-->
 			<!--{else}-->
-				<div class="tbn">
-					<h2 class="mt bbda">{lang feed}</h2>
-					<ul>
-						<li$actives[we]><a href="home.php?mod=space&do=home&view=we">{lang friend_feed}</a></li>
-						<li$actives[me]><a href="home.php?mod=space&do=home&view=me">{lang my_feed}</a></li>
-						<li$actives[all]><a href="home.php?mod=space&do=home&view=all">{lang view_all}</a></li>
-						<!--{if $_G['setting']['my_app_status']}-->
-						<li$actives[app]><a href="home.php?mod=space&do=home&view=app">{lang view_app_feed}</a></li>
-						<!--{/if}-->
-						<!--{hook/space_home_navlink}-->
-					</ul>
-				</div>
+			<div class="leftsidebar_title">{lang feed}</div>
+			<div class="leftsidebar_list">
+					<div$actives[we]><a href="home.php?mod=space&do=home&view=we">{lang friend_feed}</a></div>
+					<div$actives[me]><a href="home.php?mod=space&do=home&view=me">{lang my_feed}</a></div>
+					<div$actives[all]><a href="home.php?mod=spacecp&ac=friend&op=find">{lang view_all}</a></div>
+					<!--{if $_G['setting']['my_app_status']}-->
+					<div$actives[app]><a href="home.php?mod=space&do=home&view=app">{lang view_app_feed}</a></div>
+					<!--{/if}-->
+					<!--{hook/space_home_navlink}--> 
+			</div>
+			 
+			 
 			<!--{/if}-->
 		</div>
 		<!--/sidebar-->
@@ -309,7 +302,7 @@
 			<!--{hook/space_home_side_bottom}-->
 		</div>
 		<!--{/if}-->
-		<div class="mn ptm pbm">
+		<div class="col-xs-10 information">
 			<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
 			<!--{if $space['uid'] && $space[self]}-->
 			<!--{if $_G[setting][homestyle]}-->
@@ -400,14 +393,7 @@
 					</div>
 				<div class="bm_c">
 	<!--{else}-->
-		<!--{template common/header}-->
-		<div id="pt" class="bm cl">
-			<div class="z">
-				<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
-				<a href="home.php?mod=space&uid=$space[uid]">{$space[username]}</a> <em>&rsaquo;</em>
-				{lang memcp_profile}
-			</div>
-		</div>
+		<!--{template common/header}--> 
 		<style id="diy_style" type="text/css"></style>
 		<div class="wp">
 			<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
