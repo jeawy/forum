@@ -1,8 +1,0 @@
-sql = 'dfsdfsdfsdf'
-sql2
-sql3
-sql4 = "
-fsdfdssssssssssssssssssssssss
-sdfdsfsdfsdfsdfsdfsdf"
-
-param = []
