@@ -130,8 +130,10 @@
 												<div class="title">
 														
 																<a href="javascript:;" id="content_$thread[tid]" class="showcontent y" title="{lang content_actions}" onclick="CONTENT_TID='$thread[tid]';CONTENT_ID='$thread[id]';showMenu({'ctrlid':this.id,'menuid':'content_menu'})"></a>
-																<!--{if in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
-																	<a href="javascript:void(0);" onclick="hideStickThread('$thread[tid]')" class="showhide y" title="{lang hidedisplayorder}">{lang hidedisplayorder}</a></em>
+																<!--{if $modmenu['thread']}-->
+																	<!--{if in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+																		<a href="javascript:void(0);" onclick="hideStickThread('$thread[tid]')" class="showhide y" title="{lang hidedisplayorder}">{lang hidedisplayorder}</a></em>
+																	<!--{/if}-->
 																<!--{/if}-->
 																<!--{if !$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])}-->
 																		<!--{eval $thread[tid]=$thread[closed];}-->
@@ -176,7 +178,7 @@
 																<!--{if $thread['mobile']}-->
 																	<img src="{IMGDIR}/mobile-attach-$thread['mobile'].png" alt="{lang post_mobile}" align="absmiddle" />
 																<!--{/if}-->
-																<!--{if $thread['digest'] > 0 && $filter != 'digest'}--> 
+																<!--{if $thread['digest'] > 0 }--> 
 																<span class="label label-warning">精华</span>
 																<!--{/if}-->
 																<!--{if $thread['displayorder'] == 0}-->
@@ -208,10 +210,8 @@
 																		<span class="fromg xg1"> [{lang from}: <a href="forum.php?mod=group&fid={$groupnames[$thread[tid]][fid]}" target="_blank" class="xg1">{$groupnames[$thread[tid]][name]}</a>]</span>
 																	<!--{/if}-->
 																<!--{/if}-->
-															
-													
-													
-													{if $thread['displayorder'] == 1}<span class="label label-danger">置顶</span>{/if}
+															 
+													<!--{if  in_array($thread['displayorder'], array(1, 2, 3, 4)) }--><span class="label label-danger">置顶</span><!--{/if}-->
 												</div>
 												<div class="pull-left">
 													<ul class="user">
