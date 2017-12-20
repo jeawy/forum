@@ -1,5 +1,5 @@
 <!--{template search/header}-->
-<div id="ct" class="cl w">
+<div class=" search-container container container_custom">
 	<div class="mw">
 		<form class="searchform" method="post" autocomplete="off" action="search.php?mod=forum" onsubmit="if($('scform_srchtxt')) searchFocus($('scform_srchtxt'));">
 			<input type="hidden" name="formhash" value="{FORMHASH}" />
@@ -14,7 +14,7 @@
 			<!--{if $policymsgs}--><p>{lang search_credit_msg}</p><!--{/if}-->
 		</form>
 
-		<div class="bm bw0">
+		<div class="bm bw0"> 
 			<div class="sttl mbn"><h2>{lang search_thread_higher}</h2></div>
 			<div class="bm_c">
 				<form method="post" autocomplete="off" action="search.php?mod=forum" onsubmit="if($('srchtxt_1')) searchFocus($('srchtxt_1'));">
@@ -106,7 +106,7 @@
 							<th></th>
 							<td>
 								<input type="hidden" name="searchsubmit" value="yes" />
-								<button type="submit" class="pn pnc"><strong>{lang search}</strong></button>
+								<button type="submit" class="orange-btn"><strong>{lang search}</strong></button>
 							</td>
 						</tr>
 					</table>
@@ -116,4 +116,4 @@
 
 	</div>
 </div>
-<!--{template search/footer}-->
+<!--{template common/footer}-->
