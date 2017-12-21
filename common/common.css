@@ -535,7 +535,7 @@ CSS 写作注意事项：
 /* 提示信息 alert_win － altw*/
 .altw { width: 350px; }
 	.altw .fltc { margin-bottom: 0; padding: 8px; }
-		.alert_right, .alert_error, .alert_info { padding: 6px 0 6px 58px; min-height: 40px; height: auto !important; height: 40px; line-height: 160%; background:url({IMGDIR}/right.gif) no-repeat 8px 8px; font-size: 14px; }
+		.alert_right, .alert_error, .alert_info { padding: 6px 0 6px 58px; min-height: 40px; height: auto !important; height: 40px; line-height: 160%; background:url({IMGDIR}/right.gif) no-repeat 8px 2px; font-size: 14px; }
 		.alert_error { background-image: url({IMGDIR}/error.gif); }
 			.alert_error a { font-weight: 700; color: {HIGHLIGHTLINK}; }
 		.alert_info { background-image: url({IMGDIR}/info.gif); }
