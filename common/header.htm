@@ -72,25 +72,18 @@
 							<span class="logged_in_name">{$_G['member']['username']}</span>
 							<div id="user_login_nav">
 								<ul>
-									<li>
-										<a href="home.php?mod=spacecp&ac=avatar">设置</a>
+									<li><img src="{$_G['own_static_path']}/img/set.png"><a href="home.php?mod=spacecp&ac=avatar">设置</a>
 									</li>
-									<li class="vertical_line">
-										<a href="home.php?mod=space&do=pm">消息</a>
+									<li><img src="{$_G['own_static_path']}/img/msg.png"><a href="home.php?mod=space&do=pm">消息</a>
 									</li>
-									<li>
-										<a href="home.php?mod=space&do=friend">好友</a>
+									<li><img src="{$_G['own_static_path']}/img/friend.png"></i><a href="home.php?mod=space&do=friend">好友</a>
 									</li>
-								</ul>
-								<ul>
-									<li>
-										<a href="forum.php?mod=guide&view=my">帖子</a>
+								
+									<li><img src="{$_G['own_static_path']}/img/post.png"><a href="forum.php?mod=guide&view=my">帖子</a>
 									</li>
-									<li class="vertical_line">
-										<a href="home.php?mod=space&do=favorite&view=me">收藏</a>
+									<li><img src="{$_G['own_static_path']}/img/collect.png"><a href="home.php?mod=space&do=favorite&view=me">收藏</a>
 									</li>
-									<li>
-										<a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+									<li class="bd-none"><img src="{$_G['own_static_path']}/img/quit.png"><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
 									</li>
 								</ul>
 							</div>

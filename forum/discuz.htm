@@ -61,10 +61,11 @@
 <!-- 主体内容右侧**开始 -->
 <div class="col-xs-3 right">
 		<!-- 搜索框**开始 -->
-		<form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" 
+		<form class="input-group" id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" 
 		autocomplete="off" onsubmit="searchFocus($('scbartxt'))" 
 		action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?searchsubmit=yes{/if}" target="_blank">
-			<input type="text" name="srchtxt" id="scbartxt"  class="search" placeholder="搜索" aria-describedby="basic-addon1">
+			<input type="text" name="srchtxt" id="scbartxt"  class="search form-control" placeholder="搜索" aria-describedby="basic-addon1">
+			<div class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search fa-my-search" aria-hidden="true"></i></button></div>			
 		</form>
 		<!-- 搜索框**结束 -->
 
@@ -145,25 +146,23 @@
 		<!-- 主体右侧关注我们板块**开始 -->
 		<div class="contact_us">
 			<div class="contact_us_title">关注我们</div>
-			<div class="contact_us_con text-center">
-				<div class="clearfix microblog">
-					<div class="pull-left">
-						<img class="microblog_logo" src="{$_G['own_static_path']}/img/microblog.png">
-					</div>
-					<div class="pull-left contact_microblog">
-						<div class="weibo">官方微博</div>
-						<a id="microblog" href="https://weibo.com/asu001" target="_blank">加关注</a>
-					</div>
+			<div class="contact_us_con">
+
+				<a href="https://weibo.com/asu001" target="_black" class="microblog text-center">
+					<i class="fa fa-weibo" aria-hidden="true"></i>官方微博
+				</a>
+		
+				<div class="contact_weixin text-center">
+					<i class="fa fa-weixin" aria-hidden="true"></i>官方微信
 				</div>
-				
-					<div class="contact_weixin text-center">
-						<img class="qr_code" src="{$_G['own_static_path']}/img/qrcode.png">
-						<div class="weixin">官方微信<span>扫一扫</span></div>
-						
-					</div>
-				
+		
 			</div>
 		</div>
+
+		<div class="qr_code_wrap text-center">
+				<div class="text-left">打开手机使用微信扫描二维码<span id="close" class="pull-right flbc"></span></div>
+				<img class="qr_code" src="{$_G['own_static_path']}/img/qrcode.png">
+			</div>
 		<!-- 主体右侧关注我们板块**结束 -->
 	</div>
 	<!-- 主体内容右侧**结束 -->
