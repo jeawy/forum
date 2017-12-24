@@ -117,24 +117,25 @@
 									</li>
 									<!--{else}-->
 									<li> 
-										<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=typeid&typeid=$id$forumdisplayadd[typeid]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}"><!--{if $_G[forum][threadtypes][icons][$id] && $_G['forum']['threadtypes']['prefix'] == 2}--><img class="vm" src="$_G[forum][threadtypes][icons][$id]" alt="" />
-										 <!--{if$id == 1}-->
-										<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/tiyan.png"/>
-										<!--{elseif$id == 2}-->
-										<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/jianyi.png"/>
-										<!--{elseif$id == 3}-->
-										<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/guanshui.png"/>
-										<!--{elseif$id == 4}-->
-										<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/guanfang.png"/>
-										<!--{elseif$id == 5}-->
-										<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/tongcheng.png"/>
-										<!--{elseif$id == 6}-->
-										<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/gonggao.png"/>
-										<!--{elseif$id == 7}-->
-										<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/shouqian.png"/>
-										<!--{elseif$id == 8}-->
-										<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/shouhou.png"/>
-										<!--{/if}-->
+										<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=typeid&typeid=$id$forumdisplayadd[typeid]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">
+											<!--{if $_G[forum][threadtypes][icons][$id] && $_G['forum']['threadtypes']['prefix'] == 2}--><img class="vm" src="$_G[forum][threadtypes][icons][$id]" alt="" /><!--{/if}-->
+												<!--{if $id == 1}-->
+												<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/tiyan.png"/>
+												<!--{elseif $id == 2}-->
+												<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/jianyi.png"/>
+												<!--{elseif $id == 3}-->
+												<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/guanshui.png"/>
+												<!--{elseif $id == 4}-->
+												<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/guanfang.png"/>
+												<!--{elseif $id == 5}-->
+												<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/tongcheng.png"/>
+												<!--{elseif $id == 6}-->
+												<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/gonggao.png"/>
+												<!--{elseif $id == 7}-->
+												<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/shouqian.png"/>
+												<!--{elseif $id == 8}-->
+												<img class="menu-icon" src="{$_G['own_static_path']}/img/menuico/shouhou.png"/>
+												<!--{/if}-->
 										 $name<!--{if $showthreadclasscount[typeid][$id]}--> <!--{/if}--></a></li>
 									<!--{/if}-->
 								<!--{/loop}-->
