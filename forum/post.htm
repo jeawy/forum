@@ -7,6 +7,9 @@
 	}
 	.tb{
 		padding-left:0px;
+		margin: 0px;
+		
+		line-height:inherit;
 	}
 	.fnm{
 		left: 20px !important;
@@ -16,11 +19,8 @@
 		left: 110px !important;
         top: 215px !important;
 	}
-	.my_btn {
-		padding: 4px 20px;
-	}
-	.form-control{
-		height: 22px;
+	.my_btn,.hold_btn {
+		padding: 8px 20px;
 	}
 	.recommend{
 		margin-top: 15px;
@@ -33,6 +33,23 @@
     color: red!important;
 	font-weight: 700;    
 	border: none;
+}
+
+.tb a{
+	border:none;
+	background:transparent;
+}
+ul.tb{
+	border: none;
+}
+.mbw{
+	margin-bottom: 15px!important;
+}
+.left{
+	padding:15px;
+}
+.mbw{
+	margin-bottom:15px;
 }
 </style>
 <div class="left col-xs-9">
@@ -260,7 +277,7 @@
 					<!--{if $_G['uid']}-->
 						<input type="hidden" id="postsave" name="save" value="" />
 						<!--{if $_GET[action] == 'newthread' && !$modnewthreads || $_GET[action] == 'edit' && $isfirstpost && !$modnewreplies && $thread['displayorder'] == -4}-->
-							<button type="button" id="postsubmit" class=" my_btn" value="true" onclick="$('postsave').value = 1;$('postsubmit').click();"><em>{lang save_draft}</em></button>
+							<button type="button" id="postsubmit" class="hold_btn" value="true" onclick="$('postsave').value = 1;$('postsubmit').click();"><em>{lang save_draft}</em></button>
 						<!--{/if}-->
 					<!--{/if}-->
 					<!--{hook/post_btn_extra}-->
@@ -460,11 +477,12 @@
 	<!--{/if}-->
 </div>
 <div class="right col-xs-3">
-                <form>
-                    <input type="text" class="search" placeholder="搜索" aria-describedby="basic-addon1">
-                </form>
-              
-			
+	<form class="input-group" id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" 
+	autocomplete="off" onsubmit="searchFocus($('scbartxt'))" 
+	action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?searchsubmit=yes{/if}" target="_blank">
+		<input type="text" name="srchtxt" id="scbartxt"  class="search form-control" placeholder="搜索" aria-describedby="basic-addon1">
+		<div class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search fa-my-search" aria-hidden="true"></i></button></div>			
+	</form>
                 <div class="recommend">
                     <div class="recommend_head">
                         <h3 class="panel-title">今日推介<a class="pull-right user_nub" style="color:#999;margin-right:5px;" href="#">更多 ></a></h3>

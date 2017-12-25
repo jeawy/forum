@@ -41,6 +41,25 @@
 			</style>
 
 		    <div class="left_nav">  
+				<!-- {if $_G[fid] == 39} -->
+			<div class="left_title"> 
+					<div class="title_img">
+						<span>
+							<img src="{$_G['own_static_path']}/img/server.png" />
+						</span>
+						<a class="cast2_title h1" href="#" target="_blank">服务</a>
+					</div>
+						<!-- 主体右侧发帖按钮**开始 -->
+				<a href="javascript:;" id="newspecial" 
+				onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"
+				{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} 
+				onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=37')"
+				{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=37';return false;"
+				{/if} title="{lang send_posts}" class="posted-btn"> 
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>发帖
+				</a>
+				</div>
+			<!-- {/if} -->
 				<!-- {if $_G[fid] == 37} -->
 					<div class="left_title"> 
 						<div class="title_img">
@@ -60,7 +79,6 @@
 					</a>
 					</div>
 				<!-- {/if} -->
-				
 				
 				<!--{if ($_G['forum']['threadtypes'] && $_G['forum']['threadtypes']['listable']) || count($_G['forum']['threadsorts']['types']) > 0}-->
 				<!-- {if $_G[fid] == 38} -->
@@ -82,6 +100,8 @@
 					</a>
 				</div>
 			<!-- {/if} -->
+
+			
 						<ul id="thread_types" class=" nav nav-tabs"><!-- sivan板块菜单 -->
 							<!--{hook/forumdisplay_threadtype_inner}-->
 							<li id="ttp_all" {if !$_GET['typeid'] && !$_GET['sortid']}class="xw1 a"{/if}><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_G['forum']['threadsorts']['defaultshow']}&filter=sortall&sortall=1{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">

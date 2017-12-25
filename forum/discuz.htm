@@ -6,9 +6,7 @@
 	}
 </style>
 <!-- 主体内容左侧**开始 -->
-<div class="col-xs-9 left">
-	　
-
+<div class="col-xs-9 left"><div class="hot-posted">热帖推荐</div>
 	<!--{if empty($gid)}-->
 		<!--{ad/text/wp a_t}-->
 	<!--{/if}-->
@@ -18,6 +16,7 @@
 			<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
 		</div>
 	<!--{/if}--> 
+	<div class="bm_c">
 	<!--{loop $grids['newthread'] $thread}-->
 	<div class="hot row">
 			<div class="hot_img col-xs-1">
@@ -51,7 +50,7 @@
 			</div>
 	</div>
 	<!--{/loop}-->
- 
+</div>
 	<!--{if $_G['group']['radminid'] == 1}-->
 		<!--{eval helper_manyou::checkupdate();}-->
 	<!--{/if}-->
