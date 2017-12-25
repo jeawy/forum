@@ -556,6 +556,28 @@
 				<!--{hook/forumdisplay_side_bottom}-->
 		</div> 
 		<!-- 签到**结束 -->
+		<!-- 主体右侧推荐板块**开始 -->
+		<div class="recommend">
+				<div class="recommend_head">
+					<h3 class="panel-title">{lang hot_thread}  </h3>
+				</div>
+				<div class="recommend_body">
+					<ul>
+							<!--{loop $grids['hot'] $counter $thread}-->
+									<!--{if !$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])}-->
+										<!--{eval $thread[tid]=$thread[closed];}-->
+									<!--{/if}-->
+									<li class="font_color">
+											<a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra"{if $thread['highlight']} $thread['highlight']{/if}{if $_G['setting']['grid']['showtips']} tip="{lang title}: <strong>$thread[oldsubject]</strong><br/>{lang author}: $thread[author] ($thread[dateline])<br/>{lang show}/{lang reply}: $thread[views]/$thread[replies]" onmouseover="showTip(this)"{else} title="$thread[oldsubject]"{/if}{if $_G['setting']['grid']['targetblank']} target="_blank"{/if}>
+												
+												<span class="orange_round"><!--{eval echo $counter+1;}--></span>$thread[subject]</a>
+										</li>
+									
+							<!--{/loop}--> 
+					<ul>
+				</div>
+			</div>
+			<!-- 主体右侧推荐板块**结束 -->
 
 		<div class="recommend">
             <div class="recommend_head">
