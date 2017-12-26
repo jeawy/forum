@@ -5,17 +5,21 @@
 		 padding-left: 0px;
 		 padding-right:0px;
 	 } 
+	 .swiper-container{
+		 display: none;
+	 }
  </style>
 <section class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 o-flow">
                
 				<div class="title_my_posts">我的帖子</div>
 				<!--{if $view != 'index'}-->
 					<div id="pgt" class="bm bw0 pgs cl">
 							$multipage
-							<a class="Posted_btn" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">
-								 {lang send_posts}</a>
+							<a class="posted_btn text-right" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">
+								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+								<!-- {lang send_posts} -->发帖</a>
 					</div>
 				<!--{/if}--> 
 				<div class="my_posts_tab clearfix">
