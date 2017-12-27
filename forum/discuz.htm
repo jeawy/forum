@@ -4,9 +4,29 @@
 	.container_custom{
 		margin-top: 20px;
 	}
+	.font_color_gray{
+		color:#6c6c6c;
+	}
+	.font_color_gray a{
+		font-size: 12px;
+	}
+	.gray_round {
+    margin-right: 7px;
+    height: 4px;
+    padding: 0px;
+    border: 1px solid #6c6c6c;
+    color: #6c6c6c;
+    border-radius: 50%;
+    display: inline-block;
+    width: 4px;
+    font-size: 12px;
+    text-align: center;
+	background-color: #e5e5e5;
+    line-height: 14px;
+}
 </style>
 <!-- 主体内容左侧**开始 -->
-<div class="col-xs-9 left"><div class="hot-posted">热帖推荐</div>
+<div class="col-xs-9 left"><div class="hot-posted">最新帖子</div>
 	<!--{if empty($gid)}-->
 		<!--{ad/text/wp a_t}-->
 	<!--{/if}-->
@@ -29,9 +49,27 @@
 					<div class="title">
 						<a class="title_1" $thread['highlight'] href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra">$thread[subject]</a>
 						
-						<!--{if $thread['digest']}-->
-						<span class="label label-warning">精华</span>
-						<!--{/if}-->  
+						 
+						<!--{if $thread[folder] == 'lock'}-->
+						<img src="{IMGDIR}/folder_lock.gif" />
+						<!--{elseif $thread['special'] == 1}-->
+							<img src="{IMGDIR}/pollsmall.gif" alt="{lang thread_poll}" />
+						<!--{elseif $thread['special'] == 2}-->
+							<img src="{IMGDIR}/tradesmall.gif" alt="{lang thread_trade}" />
+						<!--{elseif $thread['special'] == 3}-->
+							<img src="{IMGDIR}/rewardsmall.gif" alt="{lang thread_reward}" />
+						<!--{elseif $thread['special'] == 4}-->
+							<img src="{IMGDIR}/activitysmall.gif" alt="{lang thread_activity}" />
+						<!--{elseif $thread['special'] == 5}-->
+							<img src="{IMGDIR}/debatesmall.gif" alt="{lang thread_debate}" />
+						<!--{elseif in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+							<img src="{IMGDIR}/pin_$thread[displayorder].gif" alt="$_G[setting][threadsticky][3-$thread[displayorder]]" />
+						<!--{else}-->
+						 
+						<!--{/if}-->
+						<!--{if $thread['digest'] > 0 && $filter != 'digest'}-->
+						<img src="{IMGDIR}/digest_$thread[digest].gif" align="absmiddle" alt="digest" title="{lang thread_digest} $thread[digest]" />
+						<!--{/if}-->
 					</div>
 					<div class="pull-left">
 						<ul class="user">
@@ -92,10 +130,10 @@
 					        	<!--{if !$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])}-->
 									<!--{eval $thread[tid]=$thread[closed];}-->
 								<!--{/if}-->
-								<li class="font_color">
-										<a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra"{if $thread['highlight']} $thread['highlight']{/if}{if $_G['setting']['grid']['showtips']} tip="{lang title}: <strong>$thread[oldsubject]</strong><br/>{lang author}: $thread[author] ($thread[dateline])<br/>{lang show}/{lang reply}: $thread[views]/$thread[replies]" {else} title="$thread[oldsubject]"{/if}{if $_G['setting']['grid']['targetblank']} target="_blank"{/if}>
+								<li class="font_color_gray">
+										<a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra"{if $thread['highlight']} $thread['highlight']{/if}{if $_G['setting']['grid']['showtips']} tip="{lang title}: <strong>$thread[oldsubject]</strong><br/>{lang author}: $thread[author] ($thread[dateline])<br/>{lang show}/{lang reply}: $thread[views]/$thread[replies]" {else} title="$thread[oldsubject]"{/if}{if $_G['setting']['grid']['targetblank']} {/if}>
 											
-											<span class="orange_round"><!--{eval echo $counter+1;}--></span>$thread[subject]</a>
+											<span class="gray_round"></span>$thread[subject]</a>
 									</li>
 								
 						<!--{/loop}--> 

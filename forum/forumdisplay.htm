@@ -587,9 +587,9 @@
 						    <!--{eval $counter = 0;}-->
 							<!--{loop $_G['forum']['recommendlist']   $rtid $recommend}-->	
 							         <!--{eval $counter = $counter + 1;}-->				 
-									<li class="font_color">
-										<a href="forum.php?mod=viewthread&tid=$rtid" $recommend[subjectstyles] target="_blank" >
-											<span class="orange_round"><!--{eval echo $counter;}--></span>$recommend[subject]</a>
+									<li class="font_color_gray">
+										<a href="forum.php?mod=viewthread&tid=$rtid" $recommend[subjectstyles]   >
+											<span class="gray_round"></span>$recommend[subject]</a>
 									</li>
 							<!--{/loop}--> 
 					<ul>

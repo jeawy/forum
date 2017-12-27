@@ -1,0 +1,6 @@
+{customstatus}<p class="xg1">{*}</p>{/customstatus}
+{groupicon}<p>{*}</p>{/groupicon}
+{authortitle}<p><em>{*}</em></p>{/authortitle}
+
+ {numbercard}
+{medal}<p class="md_ctrl">{*}</p>{/medal}
