@@ -111,7 +111,9 @@
 		onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=37')"
 		{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=37';return false;"
 		{/if} title="{lang send_posts}"> 
-			<div class="text_posted text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>发帖</div>
+			<div class="text_posted text-center">
+				<img class="pencil" src="{$_G['own_static_path']}/img/pencil.svg" alt="edit">发帖
+			</div>
 		</a>
 		<!-- 主体右侧发帖按钮**结束 -->
 		

@@ -31,12 +31,19 @@
 .mn ul{
 	margin-top:15px; 
 }
+.friend,.send{
+	width: 18px;
+	margin: 0 6px 2px 0;
+}
 .pm2,.addf{
 	background-color: rgb(254,112,60);
-	color: #fff;
-	padding: 4px 12px;
+	color: #fff!important;
+	padding: 4px 12px 3px;
 	border-radius: 4px;
 	margin-bottom: 5px;
+}
+.addf .xi2{
+	color: #fff!important;
 }
  </style>
     <section class="container userinfo_top">
@@ -61,13 +68,16 @@
 			<!--{/if}-->
 			<li class="addf">
 				<!--{if !$isfriend}-->
-				<a href="home.php?mod=spacecp&ac=friend&op=add&uid=$space[uid]&handlekey=addfriendhk_{$space[uid]}" id="a_friend_li_{$space[uid]}" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang add_friend}</a>
+				<a href="home.php?mod=spacecp&ac=friend&op=add&uid=$space[uid]&handlekey=addfriendhk_{$space[uid]}" id="a_friend_li_{$space[uid]}" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">
+						<img class="friend" src="{$_G['own_static_path']}/img/friend.svg" alt="icon">{lang add_friend}</a>
 				<!--{else}-->
-				<a href="home.php?mod=spacecp&ac=friend&op=ignore&uid=$space[uid]&handlekey=ignorefriendhk_{$space[uid]}" id="a_ignore_{$space[uid]}" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang ignore_friend}</a>
+				<a href="home.php?mod=spacecp&ac=friend&op=ignore&uid=$space[uid]&handlekey=ignorefriendhk_{$space[uid]}" id="a_ignore_{$space[uid]}" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">
+						<img class="friend" src="{$_G['own_static_path']}/img/friend.svg" alt="icon">{lang ignore_friend}</a>
 				<!--{/if}-->
 			</li>
 			<li class="pm2">
-				<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2" id="a_sendpm_$space[uid]" onclick="showWindow('showMsgBox', this.href, 'get', 0)" title="{lang send_pm}">{lang send_pm}</a>
+				<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2" id="a_sendpm_$space[uid]" onclick="showWindow('showMsgBox', this.href, 'get', 0)" title="{lang send_pm}">
+						<img class="send" src="{$_G['own_static_path']}/img/send.svg" alt="icon">{lang send_pm}</a>
 			</li>
 		</ul>
 		<!--{if helper_access::check_module('follow')}-->
