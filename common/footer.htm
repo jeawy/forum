@@ -56,9 +56,11 @@
 	
 	<!-- [gls] footer start -->
 	<div class="footer">
-		<div class="code"> 
-			<img class="code_weixin" src="{$_G['own_static_path']}/img/code1.png" /> 
-			<img class="code_qq" src="{$_G['own_static_path']}/img/code2.png" /> 
+		<div class="code_weixin"> 
+			<img src="{$_G['own_static_path']}/img/code1.png" /> 
+		</div>
+		<div class="code_qq">
+				<img src="{$_G['own_static_path']}/img/code2.png" /> 
 		</div>
 				<ul class="footer_nav">
 						<li><a href="">一数官网</a></li>
@@ -170,16 +172,24 @@
 	<script src="{$_G['own_static_path']}/js/footer.js"></script>	 
 
 	<script language="javascript"> 
-		var mySwiper = new Swiper('.swiper-container',{
-		pagination : '.swiper-pagination',
-		prevButton:'.swiper-button-prev',
-		nextButton:'.swiper-button-next',
-		})
-	</script>
-	<script type="text/javascript">
-        jQuery('.logged_in').click(function() {
-            jQuery('#user_login_nav').slideToggle();
-        })
+		window.onload = function() {
+					var mySwiper = new Swiper('.swiper-container', {
+						pagination: '.swiper-pagination',
+						prevButton: '.swiper-button-prev',
+						nextButton: '.swiper-button-next',
+						speed: 300,
+						loop: true,
+						observer: true,
+						observeParents: true,
+						autoplayDisableOnInteraction: false,
+						autoplay: 3000
+					});
+				}
+		</script>
+			<script language="javascript"> 
+			jQuery('.logged_in').click(function () {
+				jQuery('#user_login_nav').slideToggle();
+			})
     </script>
 	<!--  js end -->
 </body>
