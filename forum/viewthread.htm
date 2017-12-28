@@ -52,16 +52,17 @@
 	.recommend ul li{
 		width: 100%;
 	}
-	.avatar-td{
-		width: 15%;
-		text-align: center;
-	}
+	
 	.plc{
-		width: 85%
+		padding-right:30px;
+		padding-left: 35px;
+	}
+	.ml-15{
+		padding-left: 30px;
 	}
 	.avatar img{
-		width: 80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
 		border-radius: 50%;
 	}
 	.t_fsz{
@@ -76,11 +77,7 @@
 	.xi2 a{
 		color:#333;;
 	}
-	.avatar img{
-		border:1px #ddd solid;
-		padding: 4px;
-		margin-bottom: 6px;
-	}
+	
 	li.pm2 a.xi2:link{
 		padding: 2px 12px;
 		color: #333;
@@ -90,21 +87,10 @@
 		height: auto;
 		overflow: visible;
 	}
-	.bbs-moderator
 	</style>
 	 
 	
 	<div class="left_nav">  
-			<!-- {if $_G[fid] == 37} -->
-				<div class="left_title"> 
-						<div class="title_img">
-							<span href="#" target="_blank">
-								<img src="{$_G['own_static_path']}/img/cast_title.png" />
-							</span>
-							<a class="cast2_title h1" href="#" target="_blank">ASU Watch</a>
-						</div>
-				</div><!-- sivan社区详情 -->
-			<!-- {/if} -->
 			<!--{if ($_G['forum']['threadtypes'] && $_G['forum']['threadtypes']['listable']) || count($_G['forum']['threadsorts']['types']) > 0}-->
 					<ul id="thread_types" class=" nav nav-tabs">
 						<!--{hook/forumdisplay_threadtype_inner}-->
