@@ -172,16 +172,24 @@
 	<script src="{$_G['own_static_path']}/js/footer.js"></script>	 
 
 	<script language="javascript"> 
-		var mySwiper = new Swiper('.swiper-container',{
-		pagination : '.swiper-pagination',
-		prevButton:'.swiper-button-prev',
-		nextButton:'.swiper-button-next',
-		})
-	</script>
-	<script type="text/javascript">
-        jQuery('.logged_in').click(function() {
-            jQuery('#user_login_nav').slideToggle();
-        })
+		window.onload = function() {
+					var mySwiper = new Swiper('.swiper-container', {
+						pagination: '.swiper-pagination',
+						prevButton: '.swiper-button-prev',
+						nextButton: '.swiper-button-next',
+						speed: 300,
+						loop: true,
+						observer: true,
+						observeParents: true,
+						autoplayDisableOnInteraction: false,
+						autoplay: 3000
+					});
+				}
+		</script>
+			<script language="javascript"> 
+			jQuery('.logged_in').click(function () {
+				jQuery('#user_login_nav').slideToggle();
+			})
     </script>
 	<!--  js end -->
 </body>
