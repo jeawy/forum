@@ -1,10 +1,7 @@
 <!--{template common/header}-->
 
 <style>
-	#e_controls{
-		height: 45px;
-		padding: 10px;
-	}
+	
 	.tb{
 		padding-left:0px;
 		margin: 0px;
@@ -16,8 +13,8 @@
         top: 215px !important;
 	}
 	.fszm{
-		left: 110px !important;
-        top: 215px !important;
+		top: 155px !important;
+		margin-left: -117px;
 	}
 	.my_btn,.hold_btn {
 		padding: 8px 20px;
@@ -82,7 +79,14 @@ ul.tb{
 		width: auto!important;
 	}
 	#gender_ctrl_menu{
-width: auto!important;
+        width: auto!important;
+	}
+	.pnc{ 
+		border-radius: 0px !important;
+		height: 30px !important;
+	}
+	#e_quote_menu, #e_code_menu, #e_url_menu, #e_at_menu{
+		width: 470px !important;
 	}
 	dd.hasd{
 		position: relative;
@@ -94,6 +98,22 @@ width: auto!important;
     margin-top: 8px;
 	}
 	.exfm .rq { float: left; padding-right: 2px; line-height: 1.8;}
+	button.pn{
+		margin-left:0px;
+	}
+	#smiliesdiv_tb ul li a{
+		color:rgb(169, 169, 169); 
+	}
+	li.current a{
+		color:black !important; 
+	}
+	#e_stype_2{
+		border-left: 1px solid rgb(169, 169, 169) ;
+		border-right: 1px solid rgb(169, 169, 169) ;
+	}
+	.tb li{
+		margin:0 3px 0px 0;
+	}
 </style>
 <div class="left col-xs-9">
 	<script type="text/javascript">
@@ -280,7 +300,7 @@ width: auto!important;
 					<span id="custominfo" class="y cur1{if $_GET[action] != 'reply'} mtn{/if}">&nbsp;<img src="{IMGDIR}/info_small.gif" alt="{lang faq}" /></span>
 				<!--{/if}-->
 				<!--{hook/post_top}-->
-
+               
 				<!--{subtemplate forum/post_editor_extra}-->
 
 				<!--{subtemplate forum/post_editor_body}-->
