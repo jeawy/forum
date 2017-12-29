@@ -11,6 +11,15 @@ var disablepostctrl = parseInt('{$_G['group']['disablepostctrl']}');
 		border-color:#DDD;
 		background:none;
 	}
+	.bn_line{
+		margin-top:20px;
+	}
+	.line_bt{
+		width: 14%;
+	}
+	.line_td{
+		padding-top: 15px;
+	}
 </style>
 
 <div id="f_pst" class="pl{if empty($_GET[from])} bm bmw{/if}">
@@ -118,20 +127,30 @@ var disablepostctrl = parseInt('{$_G['group']['disablepostctrl']}');
 	<input type="hidden" name="formhash" value="{FORMHASH}" />
 	<input type="hidden" name="usesig" value="$usesigcheck" />
 	<input type="hidden" name="subject" value="  " />
-	<p class="ptm pnpost">
+	<table class="ptm pnpost">
+		<tr>
+			<td class="line_bt" >
+				<button {if $allowpostreply}type="submit" {elseif !$_G['uid']}type="button" onclick="showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes')" {/if}{if !$seccodecheck && !$secqaacheck} onmouseover="checkpostrule('seccheck_fastpost', 'ac=reply');this.onmouseover=null" {/if}name="replysubmit" id="fastpostsubmit" class="my_btn btn-reply" value="replysubmit" tabindex="5">
+					<strong>{lang post_newreply}</strong>
+				</button>
+			</td>
+			<td class="line_td" >
+			<!--{hook/viewthread_fastpost_btn_extra}-->
+			<!--{if helper_access::check_module('follow')}-->
+			
+			<label class="lb"><input type="checkbox" name="adddynamic" class="pc" value="1" />{lang post_reply_relay}</label>
+
+			<!--{/if}-->
+			<!--{if $_GET['ordertype'] != 1 && empty($_GET[from])}--> 
+			<input id="fastpostrefresh" type="checkbox" class="pc bn_line" />
+
 		
-		<button {if $allowpostreply}type="submit" {elseif !$_G['uid']}type="button" onclick="showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes')" {/if}{if !$seccodecheck && !$secqaacheck} onmouseover="checkpostrule('seccheck_fastpost', 'ac=reply');this.onmouseover=null" {/if}name="replysubmit" id="fastpostsubmit" class="my_btn btn-reply" value="replysubmit" tabindex="5">
-			<strong>{lang post_newreply}</strong>
-		</button>
-		<!--{hook/viewthread_fastpost_btn_extra}-->
-		<!--{if helper_access::check_module('follow')}-->
-		<label class="lb"><input type="checkbox" name="adddynamic" class="pc" value="1" />{lang post_reply_relay}</label>
-		<!--{/if}-->
-		<!--{if $_GET['ordertype'] != 1 && empty($_GET[from])}-->
-		<label for="fastpostrefresh"><input id="fastpostrefresh" type="checkbox" class="pc" />{lang post_fastreply_gotolast}</label>
+			<span class=" bn_line">{lang post_fastreply_gotolast}</span>
+	    </td>
 		<script type="text/javascript">if(getcookie('fastpostrefresh') == 1) {$('fastpostrefresh').checked=true;}</script>
 		<!--{/if}-->
-	</p>
+	    </tr>
+	</table>
 	<!--{if empty($_GET[from])}-->
 			</td>
 		</tr>
