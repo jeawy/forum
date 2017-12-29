@@ -60,20 +60,20 @@
 						</div>
 					 
                         <div class="pull-right">
-								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=lastpost&orderby=lastpost$forumdisplayadd[lastpost]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="xi2{if $_GET['filter'] == 'lastpost'} xw1{/if}">
-									{lang latest}
+								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=lastpost&orderby=lastpost " class="xi2{if $_GET['filter'] == 'lastpost'} xw1{/if}">
+									{lang latest}  
 								</a>
 							 
-								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=digest&digest=1$forumdisplayadd[digest]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="xi2{if $_GET['filter'] == 'digest'} xw1{/if}">
-									<span class="reply">{lang digest_posts} </span>
+								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=digest&digest=1" class="xi2{if $_GET['filter'] == 'digest'} xw1{/if}">
+									<span class="reply">{lang digest_posts}  </span>
 								</a> 
 								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=hot" class="xi2{if $_GET['filter'] == 'hot'} xw1{/if}"><span  class="reply">{lang hot_thread}</span></a>
 								
-								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=reply&orderby=replies$forumdisplayadd[lastpost]" class="xi2{if $_GET['orderby'] == 'replies' and $_GET['filter'] == 'reply'} xw1{/if}">
+								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=reply&orderby=replies " class="xi2{if $_GET['orderby'] == 'replies' and $_GET['filter'] == 'reply'} xw1{/if}">
 									<span  class="reply">{lang reply}数</span>
 								</a>
 
-								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=reply&orderby=views$forumdisplayadd[lastpost]" class="xi2{if $_GET['orderby'] == 'views'} xw1{/if}">
+								<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=reply&orderby=views " class="xi2{if $_GET['orderby'] == 'views'} xw1{/if}">
 									<span  class="reply">{lang views}数</span>
 								</a>
 								
@@ -170,7 +170,7 @@
 																<!--{if $thread['mobile']}-->
 																	<img src="{IMGDIR}/mobile-attach-$thread['mobile'].png" alt="{lang post_mobile}" align="absmiddle" />
 																<!--{/if}--> 
-																<!--{if $thread['digest'] > 0 && $filter != 'digest'}-->
+																<!--{if $thread['digest'] > 0 }-->
 														    		<img src="{IMGDIR}/digest_$thread[digest].gif" align="absmiddle" alt="digest" title="{lang thread_digest} $thread[digest]" />
 																<!--{/if}-->
 																<!--{if $thread['displayorder'] == 0}-->
