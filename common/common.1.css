@@ -1018,16 +1018,16 @@ CSS 写作注意事项：
 /* ------------------------------------------------------------------------ 其他特定功能块 */
 /* 简易编辑器 Tiny Editor */
 	.tedt { width: 98%; border: 1px solid; border-color: #999 #CCC #CCC #999; }
-		.tedt .bar { padding: 0 10px 0 0; height: 45px; line-height: 45px; background: rgb(247,247,247); padding:8px; }
-			.fpd a { float: left; margin: 2px 5px 0 0; width: 35px; height: 27px; background: url({STATICURL}image/editor/editor.gif) no-repeat; text-indent: -9999px; line-height: 20px; overflow: hidden; }
+		.tedt .bar { padding: 0 10px 0 0; height: 25px; line-height: 25px; border-bottom: 1px solid {COMMONBORDER}; background: {COMMONBG}; }
+			.fpd a { float: left; margin: 2px 5px 0 0; width: 20px; height: 20px; background: url({STATICURL}image/editor/editor.gif) no-repeat; text-indent: -9999px; line-height: 20px; overflow: hidden; }
 			.fpd a.fbld { background-position: 0 0; }
-			.fpd a.fclr { background-position: -54px 0; }
-			.fpd a.fmg { background-position: -43px -80px; }
-			.fpd a.flnk { background-position: -8px -38px; }
-			.fpd a.fqt { background-position: -165px 0px; }
-			.fpd a.fcd { background-position: -125px 0px; }
-			.fpd a.fsml { background-position: -3px -80px; }
-			.fpd a.fat { background-position: -133px -80px; }
+			.fpd a.fclr { background-position: -60px 0; }
+			.fpd a.fmg { background-position: 0 -20px; }
+			.fpd a.flnk { background-position: -40px -20px; }
+			.fpd a.fqt { background-position: -140px -20px; }
+			.fpd a.fcd { background-position: -120px -20px; }
+			.fpd a.fsml { background-position: -20px -20px; }
+			.fpd a.fat { background-position: -140px 0; }
 		.tedt .area { padding: 4px; background: {WRAPBG}; zoom: 1; }
 		.tedt .pt { width: 100%; margin-right: 0; padding: 0 !important; border: none; background: {WRAPBG} none; }
 			.tedt .pt:focus { outline: none; -moz-box-shadow: none; }
