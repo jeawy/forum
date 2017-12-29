@@ -1781,21 +1781,21 @@ i.pstatus { display: block; margin-bottom: -30px; font-size: 12px; text-align: c
 		.tscr { float: left; overflow: hidden; width: 350px; }
 			.tscr .tdat th, .tscr .tdat td { width: 350px; }
 			.nwp { word-wrap: normal; white-space: nowrap; }
-		.tdats .c0 { padding: 0; height: 46px; text-align: center; vertical-align: bottom; background: transparent; }
-			.tdats .c0 h4 { line-height: 38px; background-color: #F60; color: {LIGHTLINK}; }
-		 	.tdats .c0 h4, .tdats .tb li { -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; }
-		.tdats .tb { float: left; margin-top: 8px; padding-left: 0; width: 350px; border-bottom-width: 4px; }
-			.tdats .tb li { padding: 0 10px; line-height: 33px; font-weight: 700; color: {LIGHTLINK}; }
-			.tdats .c0 h4, .tdats #c1, .tdats #c2, .tdats #c3, .tdats #c4 { background-image: url({IMGDIR}/bg_usergroup.png); }
+		.tdats .c0 { padding: 0; height: 46px; ; vertical-align: bottom; background: transparent; }
+			.tdats .c0 h4 { text-align: center; margin-top:12px; margin-bottom: 0px;background-color: rgb(234,80,20); color: #fff; font-size: 15px;font-weight:700;padding:15px;}
+		 	#tba{margin-bottom: 0px;margin-top: 13px;}
+		.tdats .tb { float: left; padding-left: 0; width: 350px;border: none; }
+			.tdats .tb li { padding:9px 10px;  font-weight: 700; color:#fff;width: 350px; }
+
 			.tdats .c1 { border-color: #158B00; }
 				.tdats #c1 { border-color: #158B00; background-color: #158B00; background-position: 0 -40px; }
-			.tdats .c2 { border-color: #057373; }
-				.tdats #c2 { border-color: #057373; background-color: #057373; background-position: 0 -80px; }
+	
+				.tdats #c2 { border-color: #e5e5e5; background-color: #e5e5e5; color: #333;text-align: center;font-size: 15px;}
 			.tdats .c3 { border-color: #1F57A9; }
 				.tdats #c3 { border-color: #1F57A9; background-color: #1F57A9; background-position: 0 -120px; }
 			.tdats .c4 { border-color: #1A588D; }
 				.tdats #c4 { border-color: #1A588D; background-color: #1A588D; background-position: 0 -160px; }
-			.tdats .c1 #c1, .tdats .c2 #c2, .tdats .c3 #c3, .tdats .c4 #c4 { line-height: 35px; }
+
 		.ftb td { width: 12%; }
 /** end **/
 
