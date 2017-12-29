@@ -1944,14 +1944,14 @@ body { background: #FFF none !important; }
 	#scform_tb a { float: left; display: inline; margin: 0 15px 0 3px; height: 26px; line-height: 26px; }
 		#scform_tb .y a { margin: 0 3px 0 15px; }
 		#scform_tb .a  { background: url({IMGDIR}/searchbar.png) no-repeat 50% 100%; color: #333; font-weight: 700; }
-	#scform_form { background: url({IMGDIR}/searchbar.png) repeat-x 0 0; }
-		.td_srchtxt { background: url({IMGDIR}/searchbar.png) no-repeat 0 -35px; }
+/* 	#scform_form { background: url({IMGDIR}/searchbar.png) repeat-x 0 0; }
+		.td_srchtxt { background: url({IMGDIR}/searchbar.png) no-repeat 0 -35px; } */
 		.td_srchbtn { background: url({IMGDIR}/searchbar.png) no-repeat 0 -70px; }
 		#scform_srchtxt { padding: 0 10px; width: 460px; background: transparent; outline: none; }
-		#scform_submit { width: 107px; opacity: 0; filter: alpha(opacity=0); cursor: pointer; }
-		#scform_srchtxt, #scform_submit { height: 35px; border: none; }
+		#scform_submit { width: 100px;background-color: rgb(234,80,20);filter: alpha(opacity=0); cursor: pointer; }
+		#scform_srchtxt, #scform_submit { color:#fff;height: 35px;  border: 2px solid rgb(234,80,20); }
 			.ie_all #scform_srchtxt { height: 33px; line-height: 33px; }
-	.sttl { margin: 10px 0; padding: 5px; border-bottom: 1px solid #CCC; background: #F5F5F5; }
+	.sttl { margin: 35px 0; background: #F5F5F5; }
 	.slst { width: 760px; }
 		.slst a { color: #00C; text-decoration: underline; font-weight: 400; }
 		.slst a:visited { color: purple; }
