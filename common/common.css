@@ -396,7 +396,7 @@ CSS 写作注意事项：
 	Explain:		单行输入框（px）、多行文本框（pt）和选择框(ps/select)
 	Last Modify:	Pony
 */
-	.px, .pt, .ps, select { border: 1px solid; border-color: {INPUTBORDERDARKCOLOR} {INPUTBORDER} {INPUTBORDER} {INPUTBORDERDARKCOLOR}; background: {INPUTBG} url({IMGDIR}/px.png) repeat-x 0 0; color: {TEXT}; }
+	.px, .pt, .ps, select { border: 1px solid; border-color: {INPUTBORDERDARKCOLOR} {INPUTBORDER} {INPUTBORDER} {INPUTBORDERDARKCOLOR}; background: {INPUTBG} url({IMGDIR}/px.png) repeat-x 0 0;}
 		.px, .pt { padding: 2px 4px; line-height: 17px; }
 		.px { height: 17px; }
 			.pxs { width: 30px !important; }
@@ -510,7 +510,7 @@ CSS 写作注意事项：
 			.vt th, .vt td { vertical-align: top; }
 		.tfm th { padding-top: 9px; padding-right: 5px; width: 130px; }
 			.tfm th .rq { float: right; font-size: 14px; }
-			.tfm .pt, .tfm .px { margin-right: 3px; width: 330px; }
+			.tfm .pt, .tfm .px { margin-right: 3px; width: 330px;min-height: 32px; }
 		.tfm .c, .tfm .tedt, .m_c .tfm .tedt { width: 338px; }
 		.tfm .d { clear: both; margin: 5px 0; color: {LIGHTTEXT}; }
 			.tfm .d em { margin-left: 5px; color: red; }
