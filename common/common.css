@@ -270,7 +270,6 @@ CSS 写作注意事项：
 	Last Modify:	lushnis
 */
 	.mtn { margin-top: 5px !important; }
-	.mbn { margin-bottom: 5px !important; }
 	.mtm { margin-top: 10px !important; }
 	.mbm { margin-bottom: 10px !important; }
 	.mtw { margin-top: 20px !important; }
@@ -283,8 +282,7 @@ CSS 写作注意事项：
 	Last Modify:	lushnis
 */
 	.ptn { padding-top: 5px !important; }
-	.pbn { padding-bottom: 5px !important; }
-	.ptm { padding-top: 10px !important; }
+	.pbn { padding-bottom: 15px !important; }
 	.pbm { padding-bottom: 10px !important; }
 	.ptw { padding-top: 20px !important; }
 	.pbw { padding-bottom: 20px !important; }
@@ -1071,7 +1069,7 @@ CSS 写作注意事项：
 		.ie6 .p_pop { width: 100px; }
 		.p_pof .p_pop { padding: 0; border: none; box-shadow: none; }
 		.p_pof { width: 500px; }
-		.p_opt { padding: 10px; }
+		.p_opt { padding: 10px 10px 0 10px; }
 		.p_pop li { display: inline; }
 		.p_pop a { display: block; padding: 3px 5px; border-bottom: 1px solid {SPECIALBG}; white-space: nowrap; }
 			.p_pop li:last-child a { border: none; }

@@ -31,7 +31,7 @@
 	}
 	.tb .a a{
 	background: #FFF;
-    color: red!important;
+    color: rgb(234,80,20)!important;
 	font-weight: 700;    
 	border: none;
 }
@@ -91,7 +91,10 @@ ul.tb{
 		width: auto!important;
 	}
 	#gender_ctrl_menu{
-        width: auto!important;
+		top:266px!important;
+		width: 100px!important;
+		margin-left: -13px;
+    width: 120px;
 	}
 	.pnc{ 
 		border-radius: 0px !important;
@@ -132,7 +135,7 @@ ul.tb{
 		margin:0 3px 0px 0;
 	}
 </style>
-<div class="left col-xs-9">
+<div class="left col-xs-12">
 	<script type="text/javascript">
 		var allowpostattach = parseInt('{$_G['group']['allowpostattach']}');
 		var allowpostimg = parseInt('$allowpostimg');
@@ -556,14 +559,4 @@ ul.tb{
 	<script type="text/javascript" src="{$_G['setting']['jspath']}at.js?{VERHASH}"></script>
 	<!--{/if}-->
 </div>
-<div class="right col-xs-3">
-	<form class="input-group" id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" 
-	autocomplete="off" onsubmit="searchFocus($('scbartxt'))" 
-	action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?searchsubmit=yes{/if}" target="_blank">
-		<input type="text" name="srchtxt" id="scbartxt"  class="search form-control" placeholder="搜索" aria-describedby="basic-addon1">
-		<div class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search fa-my-search" aria-hidden="true"></i></button></div>			
-	</form>
-               
-
-            </div>
 <!--{template common/footer}-->
