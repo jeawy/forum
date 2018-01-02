@@ -1,18 +1,7 @@
-<div class="bm_c u_profile">
+<div class="bm_c1  ">
 
 	<div class="pbm mbm bbda cl">
-		<h3 class="h3_custom">
-			{$space[username]}
-			<!--{if $_G['ols'][$space[uid]]}-->
-				<img src="{IMGDIR}/ol.gif" alt="online" title="{lang online}" class="vm" />&nbsp;
-			<!--{/if}-->
-			<span class="user_id">(UID: {$space[uid]}
-			<!--{eval $isfriendinfo = 'home_friend_info_'.$space['uid'].'_'.$_G[uid];}-->
-			<!--{if $_G[$isfriendinfo][note]}-->
-				, <span class="xg1">$_G[$isfriendinfo][note]</span>
-			<!--{/if}-->
-			)</span>
-		</h3>
+		 
 		<!--{if CURMODULE == 'space'}-->
 			<!--{hook/space_profile_baseinfo_top}-->
 		<!--{elseif CURMODULE == 'follow'}-->
