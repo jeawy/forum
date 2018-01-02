@@ -45,6 +45,9 @@
 .addf .xi2{
 	color: #fff!important;
 }
+.bm_c.u_profile{
+	padding-top:15px;
+}
  </style>
     <section class="container userinfo_top">
         <div class="row">
@@ -57,6 +60,7 @@
 	<!--{elseif !$space[self]}-->
 	<div class="mn">
 		<ul class="pull-right">
+				
 			<!--{if helper_access::check_module('follow')}-->
 			<li class="addflw">
 				<!--{if !ckfollow($space['uid'])}-->
@@ -115,18 +119,16 @@
 					
                     <table class="msg_table">
                         <tr>
-                            <td>无</td>
-                            <td class="left_line">无</td>
-                            <td class="left_line">无</td>
-                            <td class="left_line orange">
-                                <strong>5</strong>
-                            </td>
+                            <td>$space[threads] $userprofile[posts]</td>
+                            <td class="left_line">$space[posts]</td>
+                            <td class="left_line">$space[credits]</td>
+                            <td class="left_line ">$space[friends]</td>
                         </tr>
                         <tr>
-                            <td>VIP等级</td>
-                            <td class="left_line">贡献值</td>
-                            <td class="left_line">第多少位VIP</td>
-                            <td class="left_line">论坛积分</td>
+                            <td>{lang threads_num} </td>
+                            <td class="left_line">{lang replay_num} </td>
+                            <td class="left_line">{lang credits}</td>
+                            <td class="left_line">{lang friends_num} </td>
                         </tr>
                     </table>
                 </div>

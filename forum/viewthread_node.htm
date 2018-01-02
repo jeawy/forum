@@ -323,21 +323,30 @@ $postshowavatars = !($_G['setting']['bannedmessages'] & 2 && ($post['memberstatu
 </tr>
 	<tr>
 		<td colspan="2" class="plc plm">
+				
+				
+				
 		<!--{if $locations[$post[pid]]}-->
 			<div class="mobile-location">$locations[$post[pid]][location]</div>
 		<!--{/if}-->
 		<!--{if !IS_ROBOT && $post['first'] && !$_G['forum_thread']['archiveid']}-->
-
+	     	
 			<!--{if $post['invisible'] == 0}-->
 				<div id="p_btn" class="mtw mbm hm cl">
+						<div class="g-btn bshare-custom1">
+								<a title="分享到新浪微博" class="bshare-sinaminiblog">微博</a>
+								<a title="分享到微信" class="bshare-weixin">微信</a>
+							</div>
+							<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+							<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
 					<!--{if !empty($_G['setting']['pluginhooks']['viewthread_share_method'])}-->
 						<div class="tshare cl">
 							<b>{lang viewthread_share_to}:&nbsp;12355</b>
 							<!--{hook/viewthread_share_method}-->
 						</div>
-					   
 					<!--{/if}--> 
-					
+				
+                    
 
 					<a href="home.php?mod=spacecp&ac=favorite&type=thread&id=$_G[tid]&formhash={FORMHASH}" id="k_favorite" class="g-btn" onclick="showWindow(this.id, this.href, 'get', 0);" onmouseover="this.title = $('favoritenumber').innerHTML + ' {lang activity_member_unit}{lang thread_favorite}'" title="{lang fav_thread}"><i><img src="{IMGDIR}/fav.gif" alt="{lang thread_favorite}" />{lang thread_favorite}<span id="favoritenumber"{if !$_G['forum_thread']['favtimes']} style="display:none"{/if}>{$_G['forum_thread']['favtimes']}</span></i></a>
 					<!--{if $_G['group']['raterange'] && $post['authorid']}-->
@@ -364,7 +373,7 @@ $postshowavatars = !($_G['setting']['bannedmessages'] & 2 && ($post['memberstatu
 					<!--{hook/viewthread_useraction}-->
 				</div>
 			<!--{/if}-->
-
+                
 		<!--{/if}-->
 
 		<!--{if $post['relateitem']}-->
