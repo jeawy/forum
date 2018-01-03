@@ -869,12 +869,10 @@ CSS 写作注意事项：
 
 /* 广告 */
 	/* 页头广告 */ .a_h { padding-top: 5px; }
-	/* 二级导航广告 */ .a_mu { border: solid {COMMONBORDER}; border-width: 0 1px 1px; background: {COMMONBG}; }
+	
 	/* 页尾广告 */ .a_f { margin: 5px auto; }
 	/* 日志内容广告 */ .a_b { float: right; margin: 0 0 5px 5px; }
-	/* 格子广告 */ .a_t { margin-bottom: 10px; }
-		.a_t table { width: 100%; }
-		.a_t td { padding: 4px 15px; border: 1px solid {COMMONBORDER}; }
+	 
 	/* 帖内广告 */ .a_pr { float: right; overflow: hidden; }
 		.a_pt, .a_pb { background: url({IMGDIR}/ad.gif) no-repeat 0 50%; margin-bottom: 6px; padding-left: 20px; zoom: 1; }
 	/* 漂浮广告 */ .a_fl, .a_fr { float: right; position: fixed; top: 350px; z-index: 100; }
@@ -888,7 +886,6 @@ CSS 写作注意事项：
 		* html .a_cn { position: absolute; top: expression(offsetParent.scrollTop+document.documentElement.clientHeight-this.offsetHeight); }
 		.a_cn .close { text-align: right; }
 
-	.a_h, .a_mu, .a_c, .a_p, .a_f, .a_t { text-align: center; }
 
 /* ------------------------------------------------------------------------ 列表样式 */
 		/*
