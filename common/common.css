@@ -882,9 +882,9 @@ CSS 写作注意事项：
 	/* 对联广告 */ .a_cb { top: 20px }
 		* html .a_cb { top: expression(offsetParent.scrollTop+20); }
 	/* 文章漂浮广告 */ .a_af { float:left; margin-right: 10px; margin-bottom: 10px; }
-	/* 右下角广告 */ .a_cn { position: fixed; right: 10px; bottom: 10px; z-index: 300; }
-		* html .a_cn { position: absolute; top: expression(offsetParent.scrollTop+document.documentElement.clientHeight-this.offsetHeight); }
-		.a_cn .close { text-align: right; }
+	 #ad_corner_close{
+		 display: none;
+	 }
 
 
 /* ------------------------------------------------------------------------ 列表样式 */
