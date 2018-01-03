@@ -6,7 +6,7 @@
 	<!--{if empty($threadlist)}-->
 		<p class="emp xs2 xg2">{lang search_nomatch}</p>
 	<!--{else}-->
-		<div class="  mtw" id="threadlist" {if $modfid} style="position: relative;"{/if}>
+		<div class="mtw fruit" id="threadlist" {if $modfid} style="position: relative;"{/if}>
 			<!--{if $modfid}-->
 			<form method="post" autocomplete="off" name="moderate" id="moderate" action="forum.php?mod=topicadmin&action=moderate&fid=$modfid&infloat=yes&nopost=yes">
 			<!--{/if}-->

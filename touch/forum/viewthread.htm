@@ -124,13 +124,13 @@
 				</div>
 		 
 	</div>
-	
-	<h4 class="orange">最新评论</h4>	 
+	<div class="reply_warp">
+	<h4 class="orange bc-w">最新评论</h4>	 
    <!--{else}-->
    <!--标题及内容结束--> 
 	<!--帖子列表**开始 -->
 	<div class="container reply" id="pid$post[pid]">
-			<div class="post-list row">
+			<div class="post-list">
 				<div class="list-user-img col-xs-2 col-sm-2">
 					<a href="#" target="_blank">
 						<img src="<!--{if !$post['authorid'] || $post['anonymous']}--><!--{avatar(0, middle, true)}--><!--{else}--><!--{avatar($post[authorid], middle, true)}--><!--{/if}-->"   />
@@ -247,7 +247,7 @@
    <!--{hook/viewthread_postbottom_mobile $postcount}-->
    <!--{eval $postcount++;}-->
    <!--{/loop}-->
-
+</div>
 
 	<!--{subtemplate forum/forumdisplay_fastpost}-->
 
