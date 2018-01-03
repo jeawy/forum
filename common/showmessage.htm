@@ -19,9 +19,10 @@
 	<!--{template common/header_ajax}-->
 <!--{/if}-->
 <!--{if $param[msgtype] == 1 || $param[msgtype] == 2 && !$_G[inajax]}-->
+		<div class="text-center nf-wrap"><img src="{$_G['own_static_path']}/img/nf.png"></div>
 		<div class="f_c altw">
-			<div id="messagetext" class="$alerttype">
-				<p>$show_message</p>
+			<div id="messagetext" class="$alerttype bi-none">
+				<p class="orange text-center">抱歉~指定的页面不存在!</p>
 				<!--{if $url_forward}-->
 					<!--{if !$param[redirectmsg]}-->
 						<p class="alert_btnleft"><a href="$url_forward">{lang message_forward}</a></p>
@@ -29,11 +30,13 @@
 						<p class="alert_btnleft"><a href="$url_forward">{lang attach_forward}</a></p>
 					<!--{/if}-->
 				<!--{elseif $allowreturn}-->
+
+				
 				<script type="text/javascript">
 					if(history.length > (BROWSER.ie ? 0 : 1)) {
-						document.write('<p class="alert_btnleft"><a href="javascript:history.back()">{lang message_go_back}</a></p>');
+						document.write('<p class="alert_btnleft text-center"><a href="forum.php?">返回主页</a><a href="javascript:history.back()">返回上一页</a></p>');
 					} else {
-						document.write('<p class="alert_btnleft"><a href="./">[ $_G['setting']['bbname'] {lang homepage} ]</a></p>');
+						document.write('<p class="alert_btnleft text-center"><a href="./">[ $_G['setting']['bbname'] {lang homepage} ]</a></p>');
 					}
 				</script>
 				<!--{/if}-->

@@ -34,10 +34,10 @@
 <!--{else}-->
 	{eval $nav = "forum.php";}
 <!--{/if}-->
- 
+<div class="text-center nf-wrap"><img src="{$_G['own_static_path']}/img/nf.png"></div>
 <!-- main jump start -->
 <div class="jump_c">
-	<p>$show_message</p>
+	<p class="orange">抱歉~指定的页面不存在!</p>
     <!--{if $_G['forcemobilemessage']}-->
 		<p>
             <a href="{$_G['setting']['mobile']['pageurl']}" class="mtn">{lang continue}</a><br />
@@ -47,7 +47,9 @@
 	<!--{if $url_forward}-->
 		<p><a class="grey" href="$url_forward">{lang message_forward_mobile}</a></p>
 	<!--{elseif $allowreturn}-->
-		<p><a class="grey" href="javascript:history.back();">{lang message_go_back}</a></p>
+		<p class="nf-btn">
+			<a href="forum.php?">返回主页</a>
+			<a  href="javascript:history.back();">返回上一页</a></p>
 	<!--{/if}-->
 </div>
 <!-- main jump end -->
