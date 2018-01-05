@@ -162,6 +162,28 @@
 	</div>
 	<!-- 主体内容右侧**结束 -->
 
-	
+	<script type="text/javascript" src="{$_G['own_static_path']}/js/swiper-3.4.2.min.js"></script>
+	<script language="javascript"> 
+			
+						var mySwiper = new Swiper('.swiper-container', {
+							pagination: '.swiper-pagination',
+							prevButton: '.swiper-button-prev',
+							nextButton: '.swiper-button-next',
+							speed: 300,
+							loop: true,
+							observer: true,
+							observeParents: true,
+							autoplayDisableOnInteraction: false,
+							autoplay: 1500
+						});
+				
+	jQuery('.swiper-container').mouseover(function(){
+        mySwiper.stopAutoplay();
+    })
+    jQuery('.swiper-container').mouseout(function(){
+        mySwiper.startAutoplay();
+    })
+
+			</script>	
 <!--{template common/footer}-->
 
