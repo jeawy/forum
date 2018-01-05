@@ -56,15 +56,15 @@
 	
 	<!-- [gls] footer start -->
 	<div class="footer">
-		<div class="code_weixin"> 
+		<div class="code"> 
 				<div class="text-left">扫描微信群二维码<span class="pull-right flbc close"></span></div>
 			<img src="{$_G['own_static_path']}/img/code1.png" /> 
 		</div>
-		<div class="qr_code_wrap"> 
+		<div class="code"> 
 				<div class="text-left">扫描官方微信二维码<span class="pull-right flbc close"></span></div>
 			<img src="{$_G['own_static_path']}/img/qrcode.png" /> 
 		</div>
-		<div class="code_qq">
+		<div class="code">
 				<div class="text-left">扫描QQ群二维码<span class="pull-right flbc close"></span></div>
 				<img src="{$_G['own_static_path']}/img/code2.png" /> 
 		</div>
@@ -186,15 +186,10 @@
 						observer: true,
 						observeParents: true,
 						autoplayDisableOnInteraction: false,
-						autoplay: 15000
+						autoplay: 1500
 					});
 				}
 		</script>
-			<script language="javascript"> 
-			jQuery('.logged_in').click(function () {
-				jQuery('#user_login_nav').slideToggle();
-			})
-    </script>
 	<!--  js end -->
 </body>
 </html>

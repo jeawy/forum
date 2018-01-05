@@ -104,7 +104,7 @@
 			
 						<ul id="thread_types" class=" nav nav-tabs"><!-- sivan板块菜单 -->
 							<!--{hook/forumdisplay_threadtype_inner}-->
-							<li id="ttp_all" {if !$_GET['typeid'] && !$_GET['sortid']}class="xw1 a"{/if}><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_G['forum']['threadsorts']['defaultshow']}&filter=sortall&sortall=1{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">
+							<li id="ttp_all ttss" {if !$_GET['typeid'] && !$_GET['sortid']}class="xw1 a"{/if}><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_G['forum']['threadsorts']['defaultshow']}&filter=sortall&sortall=1{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">
 								{lang forum_viewall}</a></li>
 							<!--{if $_G['forum']['threadtypes']}-->
 								<!--{loop $_G['forum']['threadtypes']['types'] $id $name}-->
@@ -113,7 +113,7 @@
 									<li class="xw1 a">
 										<a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_GET['sortid']}&filter=sortid&sortid=$_GET['sortid']{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}"><!--{if $_G[forum][threadtypes][icons][$id] && $_G['forum']['threadtypes']['prefix'] == 2}-->
 										<img class="vm" src="$_G[forum][threadtypes][icons][$id]" alt="" /> <!--{/if}-->
-										<strong>
+										<span>
 											<!--{if $_GET['typeid'] == 1}-->
 										<span class="menu-icon"><img src="{$_G['own_static_path']}/img/menuico/tiyan.png"/></span>
 										<!--{elseif $_GET['typeid'] == 2}-->
@@ -131,7 +131,7 @@
 										<!--{elseif $_GET['typeid'] == 8}-->
 										<span class="menu-icon"><img src="{$_G['own_static_path']}/img/menuico/shouhou.png"/></span>
 										<!--{/if}-->
-											$name</strong><!--{if $showthreadclasscount[typeid][$id]}-->
+											$name</span><!--{if $showthreadclasscount[typeid][$id]}-->
 									 <!--{/if}-->
 									</a>
 									</li>
