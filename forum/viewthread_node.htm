@@ -202,7 +202,7 @@ $postshowavatars = !($_G['setting']['bannedmessages'] & 2 && ($post['memberstatu
 				<div class="time">
 					<!--{if !IS_ROBOT && $post['first'] && !$_G['forum_thread']['archiveid']}-->
 					<!--{else}-->
-						$post[author] 
+					<span class="orange f14">$post[author]</span>
 					<!--{/if}-->	
 
 				<!--{if $close_leftinfo && !$post['anonymous'] && $postshowavatars && $showavatars}-->
