@@ -1687,7 +1687,7 @@ a.progressCancel { display: block; float: right; width: 14px; height: 14px; back
 		.tip_3 .tip_horn { right: 5px; bottom: -6px; background: url({IMGDIR}/tip_bottom.png); }
 		.tip_4 .tip_horn { left: 5px; bottom: -6px; background: url({IMGDIR}/tip_bottom.png); }
 		.tip_js .tip_horn { right: 61px; bottom: -6px; background: url({IMGDIR}/tip_bottom.png); }
-	.aimg_tip { margin-top: 0; }
+	.aimg_tip { margin-top: 0; display:none !important }
 
 /* 推荐商品 by dfox */
 em.hot { position: absolute; left: -2px; top: -2px; text-indent: -9999px; overflow: hidden; background: url({IMGDIR}/hot.png) no-repeat 0 0; }
