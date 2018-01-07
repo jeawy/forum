@@ -337,7 +337,7 @@ CSS 写作注意事项：
 	Explain:		类似统计中需注意的文字样式 [!]此处须考虑名称简写为 ntc
 	Last Modify:	lushnis
 */
-	.notice { clear: both; margin: 5px 0; padding: 3px 5px 3px 20px; background: url({IMGDIR}/notice.gif) no-repeat 2px 6px; }
+	.notice { clear: both; margin: 5px 0 0; padding: 3px 5px 0px 20px; background: url({IMGDIR}/notice.gif) no-repeat 2px 6px; }
 /*
 	Name:			mod_ajax_wait_info
 	Level:			Global
@@ -419,8 +419,6 @@ CSS 写作注意事项：
 	.pn { vertical-align: middle; overflow: hidden; margin-right: 3px; padding: 0; height: 23px; border: 1px solid #999; background: #E5E5E5 url({IMGDIR}/pn.png) repeat-x 0 0; cursor: pointer; -moz-box-shadow: 0 1px 0 #E5E5E5; -webkit-box-shadow: 0 1px 0 #E5E5E5; box-shadow: 0 1px 0 #E5E5E5; }
 		.pn:active { background-position: 0 -23px; }
 		.ie6 .pn { overflow-x: visible; width: 0; }
-
-		.pn em, .pn span, .pn strong { padding: 0 10px; line-height: 21px; }
 			.pn em, .pn strong  { font-weight: 300; }
 		.ie7 .pn em, .ie7 .pn span, .ie7 .pn strong { padding: 0 5px; line-height: 18px; }
 
@@ -741,7 +739,7 @@ CSS 写作注意事项：
 		.bml	Lite		头部无背景填充
 		.bmn	Notice		整体带有彩色背景，常用于提示信息
 	*/
-	.bm, .bn { margin-bottom: 10px; }
+
 		.bm { border: 1px solid {COMMONBORDER}; background: {WRAPBG}; }
 			.bm_c { padding: 10px; }
 		.drag {}
@@ -1062,17 +1060,17 @@ CSS 写作注意事项：
 			.sslct_btn i { float: left; display: inline; margin: 1px; width: 10px; height: 10px; background: #2E80D1; overflow: hidden; font-style: normal; }
 	#toptb a.switchblind{ width: 10px; background-image: none ; }
 /* 弹出菜单、弹出层及弹出窗口 */
-	.p_pop, .p_pof, .sllt { padding: 4px; border: 1px solid; min-width: 60px; border-color: {DROPMENUBORDER}; {DROPMENUBGCODE}; box-shadow: 1px 2px 2px rgba(0,0,0,0.3); }
+	.p_pop, .p_pof, .sllt { padding: 4px; border: 1px solid; min-width: 60px; border-color: {DROPMENUBORDER}; {DROPMENUBGCODE}; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08); }
 		.ie6 .p_pop { width: 100px; }
 		.p_pof .p_pop { padding: 0; border: none; box-shadow: none; }
 		.p_pof { width: 500px; }
-		.p_opt { padding: 10px 10px 0 10px; }
+		.p_opt { padding: 10px 0 0 10px;}
 		.p_pop li { display: inline; }
-		.p_pop a { display: block; padding: 3px 5px; border-bottom: 1px solid {SPECIALBG}; white-space: nowrap; }
+		.p_pop a { display: block; padding: 3px 5px; white-space: nowrap; }
 			.p_pop li:last-child a { border: none; }
 			.ie6 .p_pop li { zoom: 1; clear: both; width: 100%; }
 			.ie6 .p_pop a { position: relative; }
-			.p_pop a:hover, .p_pop a.a, #sctype_menu .sca { background-color: {SPECIALBG}; color: {HIGHLIGHTLINK}; text-decoration: none; }
+			.p_pop a:hover, .p_pop a.a, #sctype_menu .sca { background-color: #f5f5f5; color:rgb(234,80,20); text-decoration: none; }
 			.prompt_news, .prompt_follower,.prompt_news_0, .prompt_follower_0, .ignore_notice, .prompt_concern { float: left; width: 18px; height: 14px; margin: 3px 3px 5px 0; display: inline; background: url({IMGDIR}/ico_notice.png) no-repeat 0 0; }
 			.prompt_follower_0 { background-position: 0 -225px; }
 			.prompt_news { background-image: url({IMGDIR}/new_pm.gif); }

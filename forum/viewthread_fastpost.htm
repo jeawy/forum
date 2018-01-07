@@ -131,7 +131,7 @@ var disablepostctrl = parseInt('{$_G['group']['disablepostctrl']}');
 		<tr>
 			<td class="line_bt" >
 				<button {if $allowpostreply}type="submit" {elseif !$_G['uid']}type="button" onclick="showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes')" {/if}{if !$seccodecheck && !$secqaacheck} onmouseover="checkpostrule('seccheck_fastpost', 'ac=reply');this.onmouseover=null" {/if}name="replysubmit" id="fastpostsubmit" class="my_btn btn-reply" value="replysubmit" tabindex="5">
-					<strong>{lang post_newreply}</strong>
+				{lang post_newreply}
 				</button>
 			</td>
 			<td class="line_td" >

@@ -29,6 +29,7 @@
 		margin-bottom: 0px;  
 		border-right: none;
 		border-left:none;
+		border-top: 0px;
 	}
 	.replay-top{
 		height: 15px;
@@ -41,10 +42,11 @@
 		}
 	#modmenu{
 			padding-top:10px;
-			border:1px solid #ddd;
-			border-bottom:0px;
-			padding-left: 19px;
-			padding-right: 19px;
+			border:1px solid #cdcdcd;
+			border-bottom:none;
+			padding-left: 18px;
+			padding-right: 18px;
+			color: #6c6c6c!important;
 		}
 	.recommend p, .recommend dl, .recommend ul {
 		text-align: center;
@@ -430,7 +432,7 @@
 				<!--{subtemplate forum/viewthread_node}-->
 			</div>
 			<!--{if !IS_ROBOT && $post['first'] && !$_G['forum_thread']['archiveid']}-->
-			<div class="replay-top"></div>
+			
 			    <!-- 快速回复-->
 				<!--{if $fastpost}-->
 					<!--{subtemplate forum/viewthread_fastpost}-->
@@ -439,7 +441,6 @@
 			<!--{/if}-->
 			<!--{eval $postcount++;}-->
 		<!--{/loop}-->
-		<hr>
 		<div class="text-center">
 				$multipage 
 		</div>

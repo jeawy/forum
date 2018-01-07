@@ -143,10 +143,6 @@ function imagelist($attach, $firstpost = 0) {
 				<dt></dt>
 				<dd>
 					<!--{if !$guestviewthumb}-->
-						<p class="mbn">
-							<a href="forum.php?mod=attachment{$is_archive}&aid=$aidencode&nothumb=yes" {if $_GET['from'] != 'preview'}onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})" id="aid$attach[aid]"{/if} class="xw1" target="_blank">$attach[filename]</a>
-							<em class="xg1">($attach[attachsize], {lang downloads}: $attach[downloads])</em>
-						</p>
 						<div class="tip tip_4" id="aid$attach[aid]_menu" style="display: none" disautofocus="true">
 							<div>
 								<p>

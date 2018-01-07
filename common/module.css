@@ -996,7 +996,7 @@ a.thread_mod { background: url({IMGDIR}/bigimg.png) no-repeat 0 -38px; padding-l
 	#tath { padding: 0 10px 0 15px; width: 130px; line-height: 24px; white-space: nowrap; word-break: keep-all; word-wrap: normal; text-overflow: ellipsis; overflow: hidden; }
 		#tath img { width: 24px; height: 24px; vertical-align: middle; }
 
-#f_pst .plc { padding: 20px; }
+#f_pst .plc { padding:15px 20px; }
 	#f_pst .fpp label { zoom: 1; }
 	#f_pst .avatar { margin-top: 15px; }
 
