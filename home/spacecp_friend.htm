@@ -9,10 +9,11 @@
 	}
 	</style>
 <div  class="col-xs-2 leftsidebar p13">
+		
 	<!--{subtemplate home/space_friend_nav}-->
 </div>
 <div class="col-xs-10 personal_data">
-
+		<div class="bc-w">
 		<!--{if !$_G[inajax]}-->
  
 
@@ -22,7 +23,7 @@
 		<!--{/if}-->
 
 				<!--{if !$_G[inajax] && ($op == 'syn' || $op == 'find' || $op == 'search' || $op == 'group' || $op == 'request')}-->
-					<h1 class="mt"><img alt="friend" src="{STATICURL}image/feed/friend.gif" class="vm" />
+					<h1 class="mt">
 					<!--{if $op == 'find'}-->
 						{lang people_might_know}
 					<!--{elseif $op == 'request'}-->
@@ -471,5 +472,6 @@
 		 
 		</div>
 		<!--{/if}-->
+</div>
 </div>
 <!--{template common/footer}-->

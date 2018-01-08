@@ -78,18 +78,19 @@
 							<span class="logged_in_name">{$_G['member']['username']}</span>
 							<div id="user_login_nav">
 								<ul>
-									<li><img src="{$_G['own_static_path']}/img/set.png"><a href="home.php?mod=spacecp&ac=avatar">设置</a>
+									<li><a href="home.php?mod=spacecp&ac=avatar"><img src="{$_G['own_static_path']}/img/set.png">设置</a>
 									</li>
-									<li><img src="{$_G['own_static_path']}/img/msg.png"><a href="home.php?mod=space&do=pm">消息</a>
+									<li><a href="home.php?mod=space&do=pm"><img src="{$_G['own_static_path']}/img/msg.png">消息</a>
 									</li>
-									<li><img src="{$_G['own_static_path']}/img/friend.png"></i><a href="home.php?mod=space&do=friend">好友</a>
+									<li><a href="home.php?mod=space&do=friend"><img src="{$_G['own_static_path']}/img/friend.png">好友</a>
 									</li>
 								
-									<li><img src="{$_G['own_static_path']}/img/post.png"><a href="forum.php?mod=guide&view=my">帖子</a>
+									<li><a href="forum.php?mod=guide&view=my"><img src="{$_G['own_static_path']}/img/post.png">帖子</a>
 									</li>
-									<li><img src="{$_G['own_static_path']}/img/collect.png"><a href="home.php?mod=space&do=favorite&view=me">收藏</a>
+									<li><a href="home.php?mod=space&do=favorite&type=thread"><img src="{$_G['own_static_path']}/img/collect.png">收藏</a>
 									</li>
-									<li class="bd-none"><img src="{$_G['own_static_path']}/img/quit.png"><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+									<li class="bd-none"><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">
+											<img src="{$_G['own_static_path']}/img/quit.png">{lang logout}</a>
 									</li>
 								</ul>
 							</div>

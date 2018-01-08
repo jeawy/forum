@@ -365,7 +365,7 @@ Created & Modified by Alice, Monkey, Lushnis, Pony, Dfox & DragonLee.
 		.mdcp .um { margin-bottom: 0; padding: 10px 5px; }
 
 /* 发特殊主题帖 by dfox */
-	.sinf p, .sadd p { padding: 2px 0; height: 30px; line-height: 30px; }
+	.sinf p, .sadd p { padding: 2px 0; }
 	.sinf .px, .sadd .px { width: 130px; }
 	.sinf { float: left; padding-right: 14px; width: 380px; border-right: 1px dashed {WRAPBORDERCOLOR}; }
 		.sinf h4 { padding: 6px 0; }
@@ -1675,7 +1675,7 @@ i.pstatus { display: block; margin-bottom: -30px; font-size: 12px; text-align: c
 		.dtll { background:url({IMGDIR}/treeline_long.gif) no-repeat 2em 2px; }
 
 	.nts { padding-left: 20px; }
-		.nts dl { border-bottom: 1px dashed {COMMONBORDER}; }
+		.nts dl { border-bottom: 1px solid #ddd; }
 		.nts .more { border-top: 1px dashed {COMMONBORDER}; padding:10px 0 0 64px; }
 
 /*
@@ -1691,7 +1691,7 @@ i.pstatus { display: block; margin-bottom: -30px; font-size: 12px; text-align: c
 			.pm_o .o { overflow: hidden; float: right; margin-left: 10px; width: 16px; height: 16px; text-indent: 20px; background: url({IMGDIR}/op.png) no-repeat 0 -120px; }
 				.pm_o .o:hover { background-position: 0 -140px; }
 			.pm_o .p_pop { text-align: left; }
-		.pml .newpm { background: {SPECIALBG}; }
+		.pml .newpm { background: #f5f5f5; }
 		.pml .newpm .newpm_avt { position: absolute; margin: -2px 0 0 40px; width: 16px; height: 14px; background: url({IMGDIR}/new_pm_2.png) no-repeat 100% 0; }
 		.pm_c { padding-left: 25px; line-height: 22px; }
 			.pm_c .o { float: left; display: inline; margin: 5px 0 0 -25px; }

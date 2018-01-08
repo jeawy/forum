@@ -4,6 +4,7 @@
 		<!--{subtemplate home/spacecp_footer}-->
 	</div>
     <div class="col-xs-10 personal_data">
+		<div class="bc-w">
 	<!--{subtemplate home/spacecp_header}-->
 			<!--{hook/spacecp_avatar_top}-->
 			<script type="text/javascript">
@@ -16,7 +17,7 @@
 			</script>
 			<form method="post" autocomplete="off" action="home.php?mod=spacecp&ac=avatar&ref">
 					
-							<div class="h4">{lang current_my_space}</div>
+							<div class="fw-b mb-10">{lang current_my_space}</div>
 							<p>{lang setting_avatar_message}</p>
 							<div class="clearfix text-center userimg_show">
 								<div class="pull-left big_userimg">
@@ -34,16 +35,18 @@
 							<script type="text/javascript">document.write(AC_FL_RunContent('<!--{echo implode("','", $uc_avatarflash);}-->'));</script>
 						</td>
 					</tr>
-					<caption>
-							<h2 class="xs2">{lang setting_my_new_avatar}</h2>
+					<div>
+							<div class="fw-b mb-10">{lang setting_my_new_avatar}</div>
 							<p>{lang setting_my_new_avatar_message}</p>
-					</caption>
+					</div>
 				</table>
 				<input type="hidden" name="formhash" value="{FORMHASH}" />
 			</form>
 			<!--{hook/spacecp_avatar_bottom}-->
 		</div>
 	</div>
+	</div>
+</div>
 	<script type="text/javascript">
 		var redirecturl = loadUserdata('avatar_redirect');
 		if(redirecturl) {
@@ -51,6 +54,5 @@
 		}
 	</script>
 	
-    </div>
 </div><!-- col -->
 <!--{template common/footer}-->

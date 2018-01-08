@@ -416,7 +416,7 @@ CSS 写作注意事项：
 	Last Modify:	Pony
 */
 	button::-moz-focus-inner { border: 0; padding: 0; }
-	.pn { vertical-align: middle; overflow: hidden; margin-right: 3px; padding: 0; height: 23px; border: 1px solid #999; background: #E5E5E5 url({IMGDIR}/pn.png) repeat-x 0 0; cursor: pointer; -moz-box-shadow: 0 1px 0 #E5E5E5; -webkit-box-shadow: 0 1px 0 #E5E5E5; box-shadow: 0 1px 0 #E5E5E5; }
+	.pn { vertical-align: middle; overflow: hidden; margin-right: 3px; padding: 0; border: 1px solid #999; background: #E5E5E5 url({IMGDIR}/pn.png) repeat-x 0 0; cursor: pointer; -moz-box-shadow: 0 1px 0 #E5E5E5; -webkit-box-shadow: 0 1px 0 #E5E5E5; box-shadow: 0 1px 0 #E5E5E5; }
 		.pn:active { background-position: 0 -23px; }
 		.ie6 .pn { overflow-x: visible; width: 0; }
 			.pn em, .pn strong  { font-weight: 300; }
@@ -831,11 +831,11 @@ CSS 写作注意事项：
 	Explain:		标签样式
 	Last Modify:	lushnis
 */
-.tb { margin-top: 10px; padding-left: 5px; line-height: 30px; border-bottom: 1px solid {COMMONBORDER}; }
+.tb { margin-top: 10px; padding-left: 5px; line-height: 30px;}
 	.tb li { float: left; margin: 0 3px -1px 0; }
 		.ie6 .tb .a, .ie6 .tb .current { position: relative; }
-	.tb a { display: block; padding: 0 10px; border: 1px solid {COMMONBORDER}; background: {SPECIALBG}; }
-		.tb .a a, .tb .current a { border-bottom-color: {WRAPBG}; background: {WRAPBG}; font-weight: 700;}
+	.tb a { display: block; padding: 0 15px;  }
+		.tb .a a, .tb .current a { border-bottom-color: {WRAPBG}; }
 		.tb a:hover { text-decoration: none; }
 	.tb .y { float: right; margin-right: 0; }
 		.tb .y a { border: none; background: transparent; }
@@ -1010,7 +1010,7 @@ CSS 写作注意事项：
 
 /* ------------------------------------------------------------------------ 其他特定功能块 */
 /* 简易编辑器 Tiny Editor */
-	.tedt { width: 98%; border: 1px solid; border-color: #999 #CCC #CCC #999; }
+	.tedt { width: 98%; border: 1px solid; border-color: #ddd; }
 		.tedt .bar { padding: 0 10px 0 0; height: 45px; line-height: 45px; background: rgb(247,247,247); padding:8px; }
 			.fpd a { float: left; margin: 2px 5px 0 0; width: 35px; height: 27px; background: url({STATICURL}image/editor/editor.gif) no-repeat; text-indent: -9999px; line-height: 20px; overflow: hidden; }
 			.fpd a.fbld { background-position: 0 0; }
@@ -1060,7 +1060,7 @@ CSS 写作注意事项：
 			.sslct_btn i { float: left; display: inline; margin: 1px; width: 10px; height: 10px; background: #2E80D1; overflow: hidden; font-style: normal; }
 	#toptb a.switchblind{ width: 10px; background-image: none ; }
 /* 弹出菜单、弹出层及弹出窗口 */
-	.p_pop, .p_pof, .sllt { padding: 4px; border: 1px solid; min-width: 60px; border-color: {DROPMENUBORDER}; {DROPMENUBGCODE}; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08); }
+	.p_pop, .p_pof, .sllt { padding: 4px;min-width: 60px; {DROPMENUBGCODE}; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08); }
 		.ie6 .p_pop { width: 100px; }
 		.p_pof .p_pop { padding: 0; border: none; box-shadow: none; }
 		.p_pof { width: 500px; }
@@ -1391,10 +1391,10 @@ CSS 写作注意事项：
 	.pc_c { width: 200px; background-position: 0 -56px; background-repeat: repeat-x; }
 		.pc_inner { white-space: nowrap; text-align: center; width: auto; background-position: 50% -112px; }
 			.pc_inner i { margin-right: 10px; font-size: 12px; font-style: normal; color: {LIGHTLINK}; font-weight: 400; }
-			.pc_inner span { margin-right: 15px; color: #FFEA97; font-size: 14px; font-weight: 700; }
+			.pc_inner span { margin-right: 15px; color: #FFEA97; font-size: 14px;  }
 			* html .pc_inner span { display: inline-block; }
 				.pc_inner span a { color: #FFEA97; text-decoration: underline; }
-				.pc_inner span em { color: {LIGHTLINK}; font-size: 18px; font-weight: 400; }
+				.pc_inner span em { color: {LIGHTLINK}; font-size: 14px; font-weight: 400; }
 				.pc_inner span u { font-size: 10px; text-decoration: none; }
 				.pc_inner span em.desc { color: #930; }
 			.pc_btn img { opacity: 0.5; }

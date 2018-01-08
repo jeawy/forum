@@ -8,6 +8,7 @@
 			   <!--{subtemplate home/space_prompt_nav}-->
 		   </div>
 		   <div class="col-xs-10 information">
+			<div class="bc-w">
 					<!--{if !$_G[inajax]}-->
 					<div id="pt" class="bm cl">
 						<div class="z">
@@ -316,9 +317,8 @@
 					<!--{else}-->
 
 						<!--{if !$_G[inajax]}-->
-							<h1 class="mt"><img class="vm" src="{STATICURL}image/feed/pm.gif" alt="send pm" /> {lang send_pm}</h1>
-							<ul class="tb cl">  
-							</ul>
+							<div class="mt"><img class="vm" src="{STATICURL}image/feed/pm.gif" alt="send pm" /> {lang send_pm}</div>
+							
 						<!--{else}-->
 							<h3 class="flb">
 								<em id="return_$_GET[handlekey]">{lang send_pm}</em>
@@ -580,7 +580,8 @@
 						</div> 
 					</div>
 					<!--{/if}-->
-        </div>
+		</div>
+	</div>
     </div>
 </section>
 
