@@ -305,35 +305,16 @@
 					</div>
 				<!--{elseif $op=='request'}-->
 
-					<div class="tbmu">
-						<!--{if $list}-->
-						<div class="y">
-							<a href="home.php?mod=spacecp&ac=friend&op=addconfirm&key=$space[key]">{lang confirm_all_applications}</a><span class="pipe">|</span><a href="home.php?mod=spacecp&ac=friend&op=ignore&confirm=1&key=$space[key]" onclick="return confirm('{lang determine_ignore_all_friends_application}');">{lang ignore_all_friends_application}</a>
-						</div>
-						<!--{/if}-->
-						<span id="add_friend_div">{lang select_friend_application_do}</span>
-						<!--{if $maxfriendnum}-->
-						({lang max_friend_num})
-						<p>
-							<!--{if $_G[magic][friendnum]}-->
-							<img src="{STATICURL}image/magic/friendnum.small.gif" alt="friendnum" class="vm" />
-							<a id="a_magic_friendnum" href="home.php?mod=magic&mid=friendnum" onclick="showWindow(this.id, this.href, 'get', '0')">{lang expansion_friend}</a>
-							({lang expansion_friend_message})
-							<!--{/if}-->
-						</p>
-						<!--{/if}-->
-					</div>
 					<!--{if $list}-->
-					<ul id="friend_ul">
+					<ul id="friend_ul" class="clearfix">
 						<!--{loop $list $key $value}-->
 						<li id="friend_tbody_$value[fuid]">
-							<table cellpadding="0" cellspacing="0" class="tfm">
-								<tr>
-									<td width="140">
-										<div class="avt avtm"><a href="home.php?mod=space&uid=$value[fuid]" c="1"><!--{avatar($value[fuid],middle)}--></a></div>
+							
+								
+										<div class="avt avtm col-xs-1"><a href="home.php?mod=space&uid=$value[fuid]" c="1"><!--{avatar($value[fuid],middle)}--></a></div>
 									</td>
-									<td>
-										<h4>
+									<div class="col-xs-11">
+										<h4 class="bb-5 orange">
 											<a href="home.php?mod=space&uid=$value[fuid]">$value[fusername]</a>
 											<!--{if $ols[$value[fuid]]}--><img src="{IMGDIR}/ol.gif" alt="online" title="{lang online}" class="vm" /> <!--{/if}-->
 											<!--{if $value['videostatus']}-->
@@ -345,14 +326,11 @@
 											<p><!--{date($value[dateline], 'n-j H:i')}--></p>
 											<p><a href="home.php?mod=spacecp&ac=friend&op=getcfriend&fuid=$value[fuid]&handlekey=cfrfriendhk_{$value[uid]}" id="a_cfriend_$key" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang your_common_friends}</a></p>
 											<p class="mtm cl pns">
-												<a href="home.php?mod=spacecp&ac=friend&op=add&uid=$value[fuid]&handlekey=afrfriendhk_{$value[uid]}" id="afr_$value[fuid]" onclick="showWindow(this.id, this.href, 'get', 0);" class="pn z"><em class="z">{lang confirm_applications}</em></a>
+												<a href="home.php?mod=spacecp&ac=friend&op=add&uid=$value[fuid]&handlekey=afrfriendhk_{$value[uid]}" id="afr_$value[fuid]" onclick="showWindow(this.id, this.href, 'get', 0);" class="my_btn btn-reply pull-left"><em class="z">{lang confirm_applications}</em></a>
 												<a href="home.php?mod=spacecp&ac=friend&op=ignore&uid=$value[fuid]&confirm=1&handlekey=afifriendhk_{$value[uid]}" id="afi_$value[fuid]" onclick="showWindow(this.id, this.href, 'get', 0);" class="z ptn">{lang ignore}</a>
 											</p>
 										</div>
-									</td>
-								</tr>
-								<tbody id="cf_$value[fuid]"></tbody>
-							</table>
+									</div>
 						</li>
 						<!--{/loop}-->
 					</ul>

@@ -3,7 +3,7 @@
 <div  class="col-xs-2 leftsidebar">
 	<!--{subtemplate home/spacecp_footer}-->
 </div>
-<div class="col-xs-10 personal_data ttt66666">
+<div class="col-xs-10 personal_data">
 	<div class="bc-w">
 	<!--{subtemplate home/spacecp_header}-->
 		<!--{if $validate}-->
@@ -145,7 +145,7 @@
 					<p class="tbms mtm {if !$showbtn}tbms_r{/if}"><!--{if $showbtn}-->{lang spacecp_profile_message1}<!--{else}-->{lang spacecp_profile_message2}<!--{/if}--></p>
 					<!--{/if}-->
 				<iframe id="frame_profile" name="frame_profile" style="display: none"></iframe>
-				<form action="{if $operation != 'plugin'}home.php?mod=spacecp&ac=profile&op=$operation{else}home.php?mod=spacecp&ac=plugin&op=profile&id=$_GET[id]{/if}" method="post" enctype="multipart/form-data" autocomplete="off"{if $operation != 'plugin'} target="frame_profile"{/if} onsubmit="clearErrorInfo();">
+				<form class="t66666"action="{if $operation != 'plugin'}home.php?mod=spacecp&ac=profile&op=$operation{else}home.php?mod=spacecp&ac=plugin&op=profile&id=$_GET[id]{/if}" method="post" enctype="multipart/form-data" autocomplete="off"{if $operation != 'plugin'} target="frame_profile"{/if} onsubmit="clearErrorInfo();">
 					<input type="hidden" value="{FORMHASH}" name="formhash" />
 					<!--{if $_GET[vid]}-->
 					<input type="hidden" value="$_GET[vid]" name="vid" />
@@ -164,15 +164,6 @@
 								$htmls[$key]
 							</td>
 							<td class="p">
-								<!--{if $vid}-->
-								<input type="hidden" name="privacy[$key]" value="3" />
-								<!--{else}-->
-								<select name="privacy[$key]">
-									<option value="0"{if $privacy[$key] == "0"} selected="selected"{/if}>{lang open_privacy}</option>
-									<option value="1"{if $privacy[$key] == "1"} selected="selected"{/if}>{lang friend_privacy}</option>
-									<option value="3"{if $privacy[$key] == "3"} selected="selected"{/if}>{lang secrecy}</option>
-								</select>
-								<!--{/if}-->
 							</td>
 						</tr>
 					<!--{/if}-->

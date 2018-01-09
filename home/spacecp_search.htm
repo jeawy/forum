@@ -26,13 +26,12 @@
 					<!--{if empty($list)}-->
 						<div class="emp">{lang no_search_friend}<a href="home.php?mod=spacecp&ac=search">{lang change_search}</a></div>
 					<!--{else}-->
-						<div class="tbmu">{lang search_member_list_message}</div>
 						<!--{template home/space_list}-->
 					<!--{/if}-->
 				<!--{else}-->
 					<div class="ptm scf">
 					<!--{if $_GET['op'] == 'sex'}-->
-						<h2>{lang seek_bgfriend}</h2>
+						<h2>{lang seek_bgfriend}1111111</h2>
 						<div id="s_sex" class="bm1 bmn1">
 							<form action="home.php" method="get">
 								<table cellpadding="0" cellspacing="0" class="tfm">
@@ -81,7 +80,7 @@
 							</form>
 						</div>
 						<!--{elseif $_GET['op'] == 'reside' }-->
-						<h2>{lang seek_same_city}</h2>
+						<h2>{lang seek_same_city}222222</h2>
 						<div id="s_reside" class="bm1 bmn1">
 							<form action="home.php" method="get">
 								<table cellpadding="0" cellspacing="0" class="tfm">
@@ -108,7 +107,7 @@
 							</form>
 						</div>
 						<!--{elseif $_GET['op'] == 'birth' }-->
-						<h2>{lang seek_same_city_people}</h2>
+						<h2>{lang seek_same_city_people}333333</h2>
 						<div id="s_birth" class="bm1 bmn1">
 							<form action="home.php" method="get">
 								<table cellpadding="0" cellspacing="0" class="tfm">
@@ -135,7 +134,7 @@
 							</form>
 						</div>
 						<!--{elseif $_GET['op'] == 'birthyear' }-->
-						<h2>{lang seek_same_birthday}</h2>
+						<h2>{lang seek_same_birthday}44444</h2>
 						<div id="s_birthyear" class="bm1 bmn1">
 							<form action="home.php" method="get">
 								<table cellpadding="0" cellspacing="0" class="tfm">
@@ -176,7 +175,7 @@
 						</div>
 						<!--{elseif $_GET['op'] == 'edu' }-->
 						<!--{if $fields['graduateschool'] || $fields['education']}-->
-						<h2>{lang seek_classmate}</h2>
+						<h2>{lang seek_classmate}555555</h2>
 						<div id="s_edu" class="bm1 bmn1">
 							<form action="home.php" method="get">
 								<table cellpadding="0" cellspacing="0" class="tfm">
@@ -209,7 +208,7 @@
 						<!--{/if}-->
 						<!--{elseif $_GET['op'] == 'work' }-->
 						<!--{if $fields['occupation'] || $fields['title']}-->
-						<h2>{lang seek_colleague}</h2>
+						<h2>{lang seek_colleague}66666s</h2>
 						<div id="s_work" class="bm1 bmn1">
 							<form action="home.php" method="get">
 								<table cellpadding="0" cellspacing="0" class="tfm">
@@ -241,7 +240,6 @@
 						</div>
 						<!--{/if}-->
 					<!--{else}-->
-					<h2>{lang advance_seek}</h2>
 					<div class="bm1 bmn1">
 						<form action="home.php" method="get">
 							<table cellpadding="0" cellspacing="0" class="tfm">
@@ -254,59 +252,10 @@
 									<td><input type="text" name="uid" value="" class="px" /></td>
 								</tr>
 								<tr>
-									<th>{lang sex}:</th>
-									<td>
-										<select id="gender" name="gender">
-											<option value="0">{lang random}</option>
-											<option value="1">{lang male}</option>
-											<option value="2">{lang female}</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<th>{lang age_segment}</th>
-									<td><input type="text" name="startage" value="" size="10" class="px" style="width: 114px;" /> ~ <input type="text" name="endage" value="" size="10" class="px" style="width: 114px;" /></td>
-								</tr>
-								<tr>
-									<th>{lang upload_avatar}</th>
-									<td class="pcl"><label><input type="checkbox" name="avatarstatus" value="1" class="pc" />{lang uploaded_avatar}</label></td>
-								</tr>
-								<tr>
-									<th>{lang reside_city}</th>
-									<td id="residecitybox">$residecityhtml</td>
-								</tr>
-								<tr>
-									<th>{lang birth_city}</th>
-									<td id="birthcitybox">$birthcityhtml</td>
-								</tr>
-								<tr>
-									<th>{lang birthday}</th>
-									<td>
-										<select id="birthyear" name="birthyear" onchange="showbirthday();" class="ps">
-											<option value="0">&nbsp;</option>
-											$birthyeayhtml
-										</select> {lang year}
-										<select id="birthmonth" name="birthmonth" onchange="showbirthday();" class="ps">
-											<option value="0">&nbsp;</option>
-											$birthmonthhtml
-										</select> {lang month}
-										<select id="birthday" name="birthday" class="ps">
-											<option value="0">&nbsp;</option>
-											$birthdayhtml
-										</select> {lang day}
-									</td>
-								</tr>
-								<!--{loop $fields $fkey $fvalue}-->
-								<tr>
-									<th>{$fvalue[title]}</th>
-									<td>$fvalue[html]</td>
-								</tr>
-								<!--{/loop}-->
-								<tr>
 									<th>&nbsp;</th>
 									<td>
 										<input type="hidden" name="searchsubmit" value="true" />
-										<button type="submit" class="btn btn-default"><em>{lang seek}</em></button>
+										<button type="submit" class="my_btn btn-reply"><em>{lang seek}</em></button>
 									</td>
 								</tr>
 							</table>

@@ -1,40 +1,7 @@
 				<!--{if $list['threadcount']}-->
 						<!--{loop $list['threadlist'] $key $thread}-->
-							<tbody id="$thread[id]">
-								<tr>
-									<td class="icn">
-										<a href="forum.php?mod=viewthread&tid=$thread[icontid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra" title="{if $thread['displayorder'] == 1}{lang thread_type1} - {/if}
-											{if $thread['displayorder'] == 2}{lang thread_type2} - {/if}
-											{if $thread['displayorder'] == 3}{lang thread_type3} - {/if}
-											{if $thread['displayorder'] == 4}{lang thread_type4} - {/if}
-											{if $thread[folder] == 'lock'}{lang closed_thread} - {/if}
-											{if $thread['special'] == 1}{lang thread_poll} - {/if}
-											{if $thread['special'] == 2}{lang thread_trade} - {/if}
-											{if $thread['special'] == 3}{lang thread_reward} - {/if}
-											{if $thread['special'] == 4}{lang thread_activity} - {/if}
-											{if $thread['special'] == 5}{lang thread_debate} - {/if}
-											{if $thread[folder] == "new"}{lang have_newreplies} - {/if}
-											{lang target_blank}" target="_blank">
-										<!--{if $thread[folder] == 'lock'}-->
-											<img src="{IMGDIR}/folder_lock.gif" />
-										<!--{elseif $thread['special'] == 1}-->
-											<img src="{IMGDIR}/pollsmall.gif" alt="{lang thread_poll}" />
-										<!--{elseif $thread['special'] == 2}-->
-											<img src="{IMGDIR}/tradesmall.gif" alt="{lang thread_trade}" />
-										<!--{elseif $thread['special'] == 3}-->
-											<img src="{IMGDIR}/rewardsmall.gif" alt="{lang thread_reward}" />
-										<!--{elseif $thread['special'] == 4}-->
-											<img src="{IMGDIR}/activitysmall.gif" alt="{lang thread_activity}" />
-										<!--{elseif $thread['special'] == 5}-->
-											<img src="{IMGDIR}/debatesmall.gif" alt="{lang thread_debate}" />
-										<!--{elseif in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
-											<img src="{IMGDIR}/pin_$thread[displayorder].gif" alt="$_G[setting][threadsticky][3-$thread[displayorder]]" />
-										<!--{else}-->
-											<img src="{IMGDIR}/folder_$thread[folder].gif" />
-										<!--{/if}-->
-										</a>
-									</td>
-									<th class="$thread[folder]">
+							<div id="$thread[id]" class="posts-d clearfix">
+									<div class="col-xs-8 my-posts-t $thread[folder]">
 										<!--{if !$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])}-->
 												<!--{eval $thread[tid]=$thread[closed];}-->
 										<!--{/if}-->
@@ -95,25 +62,10 @@
 												<!--{eval $thread[tid]=$thread[closed];}-->
 											<!--{/if}-->
 										<!--{/if}-->
-									</th>
-									<td class="by"><a href="forum.php?mod=forumdisplay&fid=$thread[fid]" target="_blank">$list['forumnames'][$thread[fid]]['name']</a></td>
-									<td class="by">
-										<cite>
-										<!--{if $thread['authorid'] && $thread['author']}-->
-											<a href="home.php?mod=space&uid=$thread[authorid]" c="1">$thread[author]</a><!--{if !empty($verify[$thread['authorid']])}--> $verify[$thread[authorid]]<!--{/if}-->
-										<!--{else}-->
-											$_G[setting][anonymoustext]
-										<!--{/if}-->
-										</cite>
-										<em><span{if $thread['istoday']} class="xi1"{/if}>$thread[dateline]</span></em>
-									</td>
-									<td class="num"><a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="xi2">$thread[replies]</a><em><!--{if $thread['isgroup'] != 1}-->$thread[views]<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></em></td>
-									<td class="by">
-										<cite><!--{if $thread['lastposter']}--><a href="{if $thread[digest] != -2}home.php?mod=space&username=$thread[lastposterenc]{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}" c="1">$thread[lastposter]</a><!--{else}-->$_G[setting][anonymoustext]<!--{/if}--></cite>
-										<em><a href="{if $thread[digest] != -2}forum.php?mod=redirect&tid=$thread[tid]&goto=lastpost$highlight#lastpost{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}">$thread[lastpost]</a></em>
-									</td>
-								</tr>
-							</tbody>
+									</div>
+									<div class="col-xs-2 text-center by"><a href="forum.php?mod=forumdisplay&fid=$thread[fid]" target="_blank">$list['forumnames'][$thread[fid]]['name']</a></div>
+									<div class="col-xs-2 text-center num"><a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="xi2">$thread[replies]</a><em class="f-g">/<!--{if $thread['isgroup'] != 1}-->$thread[views]<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></em></div>
+							</div>
 							<!--{if $view == 'my' && $viewtype=='reply' && !empty($tids[$thread[tid]])}-->
 								<tbody class="bw0_all">
 									<tr>
