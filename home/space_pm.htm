@@ -40,45 +40,15 @@
 
 						<!--{if !$type && $plid}-->
 							<div class="tbmu pml pm_op_r cl">
-								<div class="y pm_o">
-									<a href="javascript:;" id="pm_operation" class="o" onmouseover="showMenu({'ctrlid':this.id, 'pos':'34'})">{lang menu}</a>
-									<div id="pm_operation_menu" class="p_pop" style="display: none;">
-										<ul>
-											<li><a href="home.php?mod=spacecp&ac=pm&op=delete&deletepm_delplid[]=$plid&plid=$plid&handlekey=pmdeletehk_{$plid}" id="a_pmdelete_$plid" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang delete_privatepm_user}">{lang pm_delete_all}</a></li>
-										</ul>
-									</div>
-								</div>
-								<a href="home.php?mod=spacecp&ac=pm&op=export&plid=$plid" class="xw1">[{lang pm_export}]</a>
+								
 							</div>
 						<!--{elseif $touid}-->
 							<div class="tbmu pml pm_op_r cl">
-								<div class="y pm_o">
-									<a href="javascript:;" id="pm_operation" class="o" onmouseover="showMenu({'ctrlid':this.id, 'pos':'34'})">{lang menu}</a>
-									<div id="pm_operation_menu" class="p_pop" style="display: none;">
-										<ul>
-											<li><a href="home.php?mod=spacecp&ac=pm&op=delete&deletepm_deluid[]=$touid&uid=$touid&handlekey=pmdeletehk_{$plid}" id="a_pmdelete_$plid" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang delete_privatepm_user}">{lang pm_delete_all}</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="xw1">
-									{lang pm_totail}
-									<a href="home.php?mod=spacecp&ac=pm&op=export&touid=$touid">[{lang pm_export}]</a>
-								</div>
+								
 							</div>
 						<!--{else}-->
 							<div class="tbmu pml pm_op_r cl{if $list && $daterange && !$touid} bw0{/if}">
-								<div class="y pm_o">
-									<a href="javascript:;" id="pm_operation" class="o" onmouseover="showMenu({'ctrlid':this.id, 'pos':'34'})">{lang menu}</a>
-									<div id="pm_operation_menu" class="p_pop" style="display: none;">
-										<ul>
-											<!--{if $founderuid == $_G[uid]}-->
-											<li><a href="home.php?mod=spacecp&ac=pm&op=delete&deletepm_delplid[]=$plid&plid=$plid&handlekey=pmdeletehk_{$plid}" id="a_pmdelete_$plid" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang delete_chatpm_comment}">{lang delete_chatpm}</a></li>
-											<!--{else}-->
-											<li><a href="home.php?mod=spacecp&ac=pm&op=delete&deletepm_quitplid[]=$plid&plid=$plid&handlekey=pmdeletehk_{$plid}" id="a_pmdelete_$plid" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang quit_chatpm_comment}">{lang quit_chatpm}</a></li>
-											<!--{/if}-->
-										</ul>
-									</div>
-								</div>
+							
 								<a href="home.php?mod=space&do=pm&subop=view&plid=$plid&type=1&daterange=2"{if $list && $daterange && !$touid} class="a"{/if}>{lang pm_group_index}</a>
 								<span class="pipe">|</span>
 								<a href="home.php?mod=space&do=pm&subop=view&plid=$plid&type=1#last"{if $list && !$daterange} class="a"{/if}>{lang pm_group_record}</a>
