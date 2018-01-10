@@ -269,7 +269,7 @@ CSS 写作注意事项：
 	Explain:		外边距样式，作用于元素的上下外边距，上下各具有 n, m, w 三个级别
 	Last Modify:	lushnis
 */
-	.mtn { margin-top: 5px !important; }
+	.mtn { margin-top: 5px !important; margin-right: 5px !important; }
 	.mtm { margin-top: 10px !important; }
 	.mbm { margin-bottom: 10px !important; }
 	.mtw { margin-top: 20px !important; }
@@ -1178,13 +1178,13 @@ CSS 写作注意事项：
 
 /* 短消息对话框 .pm -> personal_message (window) by Pony */
 	.pm { overflow: hidden; width: 400px; }
-		.pm .flb { margin-bottom: 0; padding: 1px 5px 4px; background: #CCC url({IMGDIR}/pm.png) repeat-x 0 -101px; }
+		.pm .flb { margin-bottom: 0; margin: 10px 20px; padding: 1px 5px 4px; background-color: #f7f7f7; }
 			* html .pm .flb { padding: 4px 5px 1px; }
 			.pm .flb em { padding-left: 15px; background: url({IMGDIR}/pm.png) no-repeat 0 -65px; text-shadow: 1px 1px 1px {WRAPBG}; color: {LINK}; font-size: 12px; }
-			.pm .flbc { background-image: url({IMGDIR}/pm.png); }
-		.pm_tac { padding: 5px 10px; background: {COMMONBG}; }
-		.pm .c { padding: 0; background: {COMMONBG}; }
-		.pmb { position: relative; padding: 20px 20px 0; width: 360px; height: 280px; overflow: auto; overflow-x: hidden; }
+			.pm .flbc { background-image: url({IMGDIR}/cls.gif); }
+		.pm_tac { padding: 5px 10px; margin: 10px 20px;   border-bottom: 1px solid #ddd; }
+		.pm .c { padding: 0;  }
+		.pmb { position: relative; padding: 20px 20px 0; width: 380px; height: 230px; overflow: auto; overflow-x: hidden; }
 			.pmb li { position: relative; margin-bottom: 10px; }
 				.pmt { overflow: hidden; position: absolute; bottom: 0; left: -6px; text-indent: -999px; width: 7px; height: 7px; background: url({IMGDIR}/pm.png) no-repeat -13px -40px; zoom: 1; }
 				.pmd { float: left; padding: 5px 8px; background: #F0F0F0 url({IMGDIR}/pm-bg1.png) repeat-x; border: 1px solid; border-color: #E7E7E7 #BBB #999 #E7E7E7; word-wrap: break-word; -moz-box-shadow: 2px 2px 4px #DDD; -webkit-box-shadow: 2px 2px 4px #DDD; box-shadow: 2px 2px 4px #DDD; -moz-border-radius: 10px 10px 10px 0; -webkit-border-radius: 10px 10px 10px 0; border-radius: 10px 10px 10px 0; }

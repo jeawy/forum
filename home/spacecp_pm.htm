@@ -1,14 +1,20 @@
 <!--{template common/header}-->
+<!--{if !$_G[inajax]}-->
 <link rel="stylesheet" href="{$_G['own_static_path']}/css/information.css">
-
-<section class="container">
-	   
+<!--{/if}-->
+<!--{if !$_G[inajax]}-->
+<section class="container"> 
 	   <div class="row">
+		    <!--{/if}-->  
+		   <!--{if !$_G[inajax]}-->
 		   <div class="col-xs-2 leftsidebar"> 
 			   <!--{subtemplate home/space_prompt_nav}-->
 		   </div>
+		   <!--{/if}-->
+		   <!--{if !$_G[inajax]}-->
 		   <div class="col-xs-10 information">
 			<div class="bc-w">
+				 <!--{/if}-->
 					<!--{if !$_G[inajax]}-->
 					<div id="pt" class="bm cl">
 						<div class="z">
@@ -219,14 +225,16 @@
 							<!--{/loop}-->
 						<!--{else}-->
 						<div class="pm">
+							<!--{if $_G[inajax]}--><span class="pull-right"><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
 							<h3 class="flb clearfix">
-								<em>{lang taking_with_user}<!--{if $online}-->[{lang online}]<!--{else}-->[{lang offline}]<!--{/if}--></em>
-								<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+								{lang taking_with_user}<!--{if $online}-->[{lang online}]<!--{else}-->[{lang offline}]<!--{/if}-->
+								
 							</h3>
-							<div class="pm_tac bbda cl">
+							<div class="pm_tac   cl">
 								<a href="home.php?mod=space&do=pm&subop=view&touid={$touid}#last" class="y" target="_blank">{lang view_with_sb_chat}</a>
-								<a href="home.php?mod=space&uid=$touid" target="_blank">{lang visit_sb_space}</a>
+								
 							</div>
+						 
 							<div class="c">
 								<ul class="pmb" id="msglist">
 									<!--{loop $msglist $day $msgarr}-->
@@ -267,7 +275,7 @@
 											</div>
 										</div>
 										<div class="mtn pns cl">
-											<button type="submit" class="pn pnc" id="pmsubmit_btn"><strong>{lang send}</strong></button>
+											<button type="submit" class="pn pnc" id="pmsubmit_btn"> {lang send} </button>
 											<div class="pma mtn z">
 												<a href="javascript:;" title="{lang refresh}" onclick="refreshMsg();"><img src="{IMGDIR}/pm-ico5.png" alt="{lang refresh}" class="vm" /> {lang refresh}</a>
 											</div>
@@ -436,7 +444,7 @@
 										</table>
 									</div>
 									<p class="o pns">
-										<button type="submit" name="pmsubmit_btn" id="pmsubmit_btn" value="true" class="pn pnc"><strong>{lang send}</strong></button>
+										<button type="submit" name="pmsubmit_btn" id="pmsubmit_btn" value="true" class="pn pnc" style="font-size: 14px"><strong>{lang send}</strong></button>
 									</p>
 								<!--{else}-->
 											<tr>
@@ -580,9 +588,12 @@
 						</div> 
 					</div>
 					<!--{/if}-->
+			<!--{if !$_G[inajax]}-->		
 		</div>
 	</div>
-    </div>
+	<!--{/if}-->
+	<!--{if !$_G[inajax]}-->
+	</div>
 </section>
-
+<!--{/if}-->
 <!--{template common/footer}-->
