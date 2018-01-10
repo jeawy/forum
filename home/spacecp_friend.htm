@@ -7,6 +7,21 @@
 	#fwin_a_friend_li_1{
 		top:100px!important;
 	}
+	.bb-5 a{
+		font-size: 18px;
+
+	}
+	.bb-5 span{
+		color:#ddd;
+		font-size: 12px;
+	}
+	.fa-user-plus{
+		color: #ddd;
+	}
+	.col-xs-11 div{
+		padding-bottom: 10px; 
+		border-bottom: 1px solid #ddd;
+	}
 	</style>
 <div  class="col-xs-2 leftsidebar p13">
 		
@@ -314,24 +329,28 @@
 										<div class="avt avtm col-xs-1"><a href="home.php?mod=space&uid=$value[fuid]" c="1"><!--{avatar($value[fuid],middle)}--></a></div>
 									</td>
 									<div class="col-xs-11">
-										<h4 class="bb-5 orange">
+										<p class="bb-5 orange">
 											<a href="home.php?mod=space&uid=$value[fuid]">$value[fusername]</a>
 											<!--{if $ols[$value[fuid]]}--><img src="{IMGDIR}/ol.gif" alt="online" title="{lang online}" class="vm" /> <!--{/if}-->
 											<!--{if $value['videostatus']}-->
 											<img src="{IMGDIR}/videophoto.gif" alt="videophoto" class="vm" /> <span class="xg1">{lang certified_by_video}</span>
 											<!--{/if}-->
-										</h4>
+											<span><!--{date($value[dateline], 'n-j H:i')}--></span>
+											<span class="pull-right">
+													<a href="home.php?mod=spacecp&ac=friend&op=add&uid=$value[fuid]&handlekey=afrfriendhk_{$value[uid]}" id="afr_$value[fuid]" onclick="showWindow(this.id, this.href, 'get', 0);" class="  btn-reply  ">
+															<i class="fa fa-user-plus" aria-hidden="true"></i>
+														 </a>
+												 </span>
+										</p>
+										
 										<div id="friend_$value[fuid]">
-											<!--{if $value[note]}--><div class="quote"><blockquote id="quote">$value[note]</blockquote></div><!--{/if}-->
-											<p><!--{date($value[dateline], 'n-j H:i')}--></p>
-											<p><a href="home.php?mod=spacecp&ac=friend&op=getcfriend&fuid=$value[fuid]&handlekey=cfrfriendhk_{$value[uid]}" id="a_cfriend_$key" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang your_common_friends}</a></p>
-											<p class="mtm cl pns">
-												<a href="home.php?mod=spacecp&ac=friend&op=add&uid=$value[fuid]&handlekey=afrfriendhk_{$value[uid]}" id="afr_$value[fuid]" onclick="showWindow(this.id, this.href, 'get', 0);" class="my_btn btn-reply pull-left"><em class="z">{lang confirm_applications}</em></a>
-												<a href="home.php?mod=spacecp&ac=friend&op=ignore&uid=$value[fuid]&confirm=1&handlekey=afifriendhk_{$value[uid]}" id="afi_$value[fuid]" onclick="showWindow(this.id, this.href, 'get', 0);" class="z ptn">{lang ignore}</a>
-											</p>
+											<!--{if $value[note]}-->  $value[note]  <!--{/if}-->
+											 
 										</div>
 									</div>
+									 
 						</li>
+						
 						<!--{/loop}-->
 					</ul>
 					<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
