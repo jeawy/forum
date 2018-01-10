@@ -315,14 +315,7 @@
 						<!--{if $grouppm}-->
 							<div id="pm_ul" class="xld xlda pml mbm">
 								<dl class="bbda cl">
-									<dd class="y mtm pm_o">
-										<a href="javascript:;" id="pm_o_$grouppm[id]" class="o" onmouseover="showMenu({'ctrlid':this.id, 'pos':'34'})">{lang menu}</a>
-										<div id="pm_o_$grouppm[id]_menu" class="p_pop" style="display: none;">
-											<ul>
-												<li><a href="home.php?mod=spacecp&ac=pm&op=delete&deletepm_gpmid[]=$grouppm[id]&pmid=$grouppm[id]&handlekey=gpmdeletehk_{$grouppm[id]}" id="a_gpmdelete_$grouppm[id]" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang delete}">{lang delete}</a></li>
-											</ul>
-										</div>
-									</dd>
+									
 									<dd class="m avt">
 										<!--{if $grouppm[author]}-->
 											<img src="{IMGDIR}/annpm.png" alt="" />
@@ -385,14 +378,7 @@
 									<!--{if $grouppms}-->
 										<!--{loop $grouppms $grouppm}-->
 											<dl id="gpmlist_$grouppm[id]" class="bbda tt33333 cur1 cl{if !$gpmstatus[$grouppm[id]]} newpm{/if}">
-												<dd class="y mtm pm_o">
-													<a href="javascript:;" id="pm_o_$grouppm[id]" class="o" onmouseover="showMenu({'ctrlid':this.id, 'pos':'34'})">{lang menu}</a>
-													<div id="pm_o_$grouppm[id]_menu" class="p_pop" style="display: none;">
-														<ul>
-															<li><a href="javascript:;" onclick="ajaxget('home.php?mod=spacecp&ac=pm&op=delete&deletesubmit=1&deletepm_gpmid[]=$grouppm[id]', '', 'ajaxwaitid', '', 'none', '$(\'gpmlist_$grouppm[id]\').style.display=\'none\';');">{lang delete}</a></li>
-														</ul>
-													</div>
-												</dd>
+												 
 												<dd class="m avt">
 													<div class="newpm_avt" title="{lang new_pm}"></div>
 													<a href="home.php?mod=space&do=pm&subop=viewg&pmid=$grouppm[id]">
