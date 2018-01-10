@@ -27,7 +27,15 @@ var disablepostctrl = parseInt('{$_G['group']['disablepostctrl']}');
 			<td class="userheader">
 					<div class="pull-right">
 							<div class="avatar no-border">
-							 <a href="home.php?mod=space&uid=$post[authorid]" class="ui-border" target="_blank">$post[avatar]</a>
+								<!--{if $_G[uid] }-->
+								   <a href="home.php?mod=space&uid=$_G[uid]" class="ui-border" target="_blank">
+									   <img src="uc_server/avatar.php?uid=$_G[uid]&size=middle"/>
+									</a>
+								   <!--{else}-->
+								   <a href="#" class="ui-border" target="_blank">
+										<img src="uc_server/images/noavatar_middle.gif"/>
+								   </a>
+								   <!--{/if}-->
 							</div> 
 					</div>
 			</td> 

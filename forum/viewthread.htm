@@ -517,13 +517,15 @@
         <div class="bbs-moderator">
 			<div class="text-center">
 					<div class="avatar">
-					 <a href="home.php?mod=space&uid=$post[authorid]" class="ui-border" target="_blank">$post[avatar]</a>
+					 <a href="home.php?mod=space&uid=$_G[forum_thread][authorid]" class="ui-border" target="_blank">
+						<img src="uc_server/avatar.php?uid=$thread[authorid]&size=middle"/>
+					 </a>
 					</div> 
 			</div>
 			<!--{if $_G['setting']['authoronleft']}-->
 			<div class="uname text-center">
 				<a href="home.php?mod=space&uid=$post['authorid']" target="_blank">
-						$post[author]
+					$_G[forum_thread][author]
 				</a>
 			</div>
 			
