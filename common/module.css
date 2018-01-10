@@ -585,7 +585,7 @@ Created & Modified by Alice, Monkey, Lushnis, Pony, Dfox & DragonLee.
 	/* tl --> Thread list modify by lushnis */
 	.tl .bm_c { padding-top: 0; }
 	.tl table { width: 100%; table-layout: fixed; border-collapse: separate; }
-		.tl th, .tl td { padding: 5px 0; border-bottom: 1px solid {CONTENTSEPARATE}; }
+		.tl th, .tl td { padding: 6px 0; border-bottom: 1px solid #ddd; }
 			.emptb th, .emptb td { padding: 0; border-bottom: none; }
 			.tl tr:hover th, .tl tr:hover td { background-color: {COMMONBG}; }
 			.tl .threadpre td, .tl .threadpre:hover td { background-color: #FCFCFC; }
