@@ -23,8 +23,7 @@
 					<ul class="tb cl">
 						<li$actives[privatepm] $actives[newpm]><a href="home.php?mod=space&do=pm&filter=privatepm">{lang private_pm}</a></li>
 						<li$actives[announcepm]><a href="home.php?mod=space&do=pm&filter=announcepm">{lang announce_pm}</a></li>
-						<li><a href="home.php?mod=spacecp&ac=pm">{lang send_pm}</a></li>
-						<li class="y"><a href="home.php?mod=space&do=pm&subop=setting" class="xi2">{lang pm_setting}</a></li>
+						<li><a href="home.php?mod=space&do=pm&subop=setting" class="xi2">{lang pm_setting}</a></li>
 					</ul>
 
 					<!--{if ($filter == 'privatepm' && $newpm) || $filter == 'newpm'}-->
@@ -357,7 +356,7 @@
 						<form id="pmsettingform" name="pmsettingform" method="post" autocomplete="off" action="home.php?mod=spacecp&ac=pm&op=setting">
 							<table cellspacing="0" cellpadding="0" class="tfm mtm">
 								<tr>
-									<th>{lang pm_onlyacceptfriendpm}</th>
+									<th>只接受好友消息</th>
 									<td>
 										<label class="lb"><input type="radio" name="onlyacceptfriendpm" class="pr" value="1"{if $acceptfriendpmstatus == 1} checked="checked"{/if} />{lang yes}</label>
 										<label class="lb"><input type="radio" name="onlyacceptfriendpm" class="pr" value="2"{if $acceptfriendpmstatus == 2} checked="checked"{/if} />{lang no}</label>
