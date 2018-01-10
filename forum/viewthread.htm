@@ -513,6 +513,8 @@
 		<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
 	</div>
 </div><!-- left_warp -->
+<!--{loop $postlist $post}-->
+<!--{if !IS_ROBOT && $post['first'] && !$_G['forum_thread']['archiveid']}-->
 <div class="col-xs-3 right">
         <div class="bbs-moderator">
 			<div class="text-center">
@@ -524,7 +526,7 @@
 			</div>
 			<!--{if $_G['setting']['authoronleft']}-->
 			<div class="uname text-center">
-				<a href="home.php?mod=space&uid=$post['authorid']" target="_blank">
+				<a href="home.php?mod=space&uid=$_G[forum_thread]['authorid']" target="_blank">
 					$_G[forum_thread][author]
 				</a>
 			</div>
@@ -595,7 +597,7 @@
 					{eval viewthread_profile_node('left', $post);}
 					
 				<!--{/if}-->
-				<a href="home.php?mod=space&uid=$post['authorid']" target="_blank" class="to_home">Ta的主页
+				<a href="home.php?mod=space&uid=$_G[forum_thread]['authorid']" target="_blank" class="to_home">Ta的主页
 				</a>
 				<!--{if $post[authorid] != $_G[uid]}-->
 				
@@ -605,7 +607,7 @@
 							
 							<!--{/if}-->
 							
-							<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$post[authorid]&touid=$post[authorid]&pmid=0&daterange=2&pid=$post[pid]&tid=$post[tid]" onclick="showWindow('sendpm', this.href);" title="{lang viewthread_left_sendpm}" class="send_msg">{lang viewthread_left_sendpm}</a>
+							<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$_G[forum_thread][authorid]&touid=$_G[forum_thread][authorid]&pmid=0&daterange=2&pid=$_G[forum_thread][pid]&tid=$_G[forum_thread][tid]" onclick="showWindow('sendpm', this.href);" title="{lang viewthread_left_sendpm}" class="send_msg">{lang viewthread_left_sendpm}</a>
 
 				<!--{/if}-->
 
@@ -632,6 +634,7 @@
 				<!--{/if}-->
 				</div>
 			<!--{/if}-->
+
         </div>
 		<!-- 主体右侧发帖按钮**开始 -->
 		<a id="newspecial" {if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"{/if} href="javascript:;" 
@@ -643,6 +646,8 @@
 		<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
                　
 </div> <!-- right -->
+<!--{/if}-->
+<!--{/loop}-->
 
 <!--{if $_G['relatedlinks'] || $_GET['highlight']}-->
 	<script type="text/javascript">

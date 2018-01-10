@@ -66,16 +66,18 @@ $postshowavatars = !($_G['setting']['bannedmessages'] & 2 && ($post['memberstatu
 								<!--{/if}-->
 							<!--{/if}-->
 							 
-							<span class="reply"> 
+							
 									<!--{if !$post['first'] && $modmenu['post']}-->
+									<span class="reply"> 
 										<span class="y">
 										<label for="manage$post[pid]">
 										<input type="checkbox" id="manage$post[pid]" class="pc" {if !empty($modclick)}checked="checked" {/if}onclick="pidchecked(this);modclick(this, $post[pid])" value="$post[pid]" autocomplete="off" />
 										{lang manage}
 										</label>
 										</span>
+									</span>
 									<!--{/if}--> 
-							</span>
+							
 							
 					</div> 
 					<!--{/if}-->
@@ -231,16 +233,18 @@ $postshowavatars = !($_G['setting']['bannedmessages'] & 2 && ($post['memberstatu
 							<span class="reply"><a   href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&repquote=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)">{lang reply}</a></span>
 							<!--{/if}-->
 						<!--{/if}--> 
-						<span class="reply"> 
+						
 								<!--{if !$post['first'] && $modmenu['post']}-->
+								<span class="reply"> 
 									<span class="y">
 									<label for="manage$post[pid]">
 									<input type="checkbox" id="manage$post[pid]" style="margin:2px -4px 3px 3px" class="pc" {if !empty($modclick)}checked="checked" {/if}onclick="pidchecked(this);modclick(this, $post[pid])" value="$post[pid]" autocomplete="off" />
 									{lang manage}
 									</label>
 									</span>
+								</span>
 								<!--{/if}--> 
-						</span>
+						
 					 
 				</div> 
 				<!--{/if}-->
