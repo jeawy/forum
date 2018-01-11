@@ -512,7 +512,7 @@ CSS 写作注意事项：
 			.tfm th .rq { float: right; font-size: 14px; }
 			.tfm .pt, .tfm .px { margin-right: 3px; width: 330px; }
 		.tfm .c, .tfm .tedt, .m_c .tfm .tedt { width: 338px; }
-		.tfm .d { clear: both; margin: 5px 0; color: {LIGHTTEXT}; }
+		.tfm .d { clear: both; margin: 5px 0; color: {LIGHTTEXT};font-size:12px; }
 			.tfm .d em { margin-left: 5px; color: red; }
 			.tfm .d strong { margin-left: 5px; }
 			.tfm .d a { color: {HIGHLIGHTLINK}; }
