@@ -13,9 +13,11 @@
 <div class="footer">
 	<div>
 		<!--{if !$_G[uid] && !$_G['connectguest']}-->
-		<a href="forum.php">{lang mobilehome}</a> | <a href="member.php?mod=logging&action=login" title="{lang login}">{lang login}</a> | <a href="<!--{if $_G['setting']['regstatus']}-->member.php?mod={$_G[setting][regname]}<!--{else}-->javascript:;" style="color:#D7D7D7;<!--{/if}-->" title="{$_G['setting']['reglinkname']}">{lang register}</a>
+		<a href="forum.php">{lang mobilehome}</a> | <a href="member.php?mod=logging&action=login" title="{lang login}">{lang login}</a> |
+		 <a href="<!--{if $_G['setting']['regstatus']}-->member.php?mod={$_G[setting][regname]}<!--{else}-->javascript:;" style="color:#D7D7D7;<!--{/if}-->" title="{$_G['setting']['reglinkname']}">{lang register}</a>
 		<!--{else}-->
-		<a href="home.php?mod=space&uid={$_G[uid]}&do=profile&mycenter=1">{$_G['member']['username']}</a>, <a href="member.php?mod=logging&action=logout&formhash={FORMHASH}" title="{lang logout}" class="dialog">{lang logout}</a>
+		<a href="home.php?mod=space&uid={$_G[uid]}&do=profile&mycenter=1">{$_G['member']['username']}</a>,
+		 <a href="member.php?mod=logging&action=logout&formhash={FORMHASH}" title="{lang logout}" class="dialog">{lang logout}</a>
 		<!--{/if}-->
 	</div>
     <div>
@@ -42,7 +44,7 @@
 		<a class="col-xs-4 act-grey" href="member.php?mod=logging&action=login"><img class="icon-menu" src="{$_G['own_static_path']}/img/login.svg">登录
 		</a>
 		<!--{else}-->
-		<a class="col-xs-4 act-grey" href="<!--{if $_G[uid]}-->home.php?mod=space&uid=$_G[uid]&do=profile&mycenter=1<!--{else}-->member.php?mod=logging&action=login<!--{/if}-->">
+		<a id="account" class="col-xs-4 act-grey" href="javascript:;">
 				<img class="icon-menu" src="{$_G['own_static_path']}/img/login.svg" />账户
 		</a> 
 		<!--{/if}-->
@@ -52,6 +54,17 @@
 			<a href="forum.php?mod=forumdisplay&fid=38&mobile=2">活动</a>
 			<hr class="menu-hr">
 			<a href="forum.php?mod=forumdisplay&fid=39&mobile=2">服务</a>
+		</div>
+		<div class="hide-account-menu"> 
+		<!--{if !$_G[uid] && !$_G['connectguest']}--> 
+		<a href="member.php?mod=logging&action=login" title="{lang login}">{lang login}</a>
+		<hr class="menu-hr">
+		<a href="<!--{if $_G['setting']['regstatus']}-->member.php?mod={$_G[setting][regname]}<!--{else}-->javascript:;" style="color:#D7D7D7;<!--{/if}-->" title="{$_G['setting']['reglinkname']}">{lang register}</a>
+	   <!--{else}-->
+	   <a href="home.php?mod=space&uid={$_G[uid]}&do=profile&mycenter=1">{$_G['member']['username']}</a>
+	   <hr class="menu-hr">
+		<a href="member.php?mod=logging&action=logout&formhash={FORMHASH}" title="{lang logout}" class="dialog">{lang logout}</a>
+	   <!--{/if}--> 
 		</div>
 	</nav>
 	<!-- 底部**结束 -->
