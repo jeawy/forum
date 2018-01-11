@@ -477,7 +477,7 @@ CSS 写作注意事项：
 
 .sltm { padding: 5px 11px 5px 10px; border: 1px solid {DROPMENUBORDER}; background-color: {WRAPBG}; text-align: left; }
 	.sltm li { padding: 2px 0; color: {MIDTEXT}; cursor: pointer; }
-		.sltm li:hover { color: {HIGHLIGHTLINK}; }
+		.sltm li:hover { color: rgb(234,80,20); }
 		.sltm li.current { color: {NOTICETEXT}; }
 
 /* 分享按钮 */ .oshr { float: right; margin-left: 5px; padding: 0 5px 0 22px; border: 1px solid; border-color: #CCC #A9A9A9 #A9A9A9 #CCC; background: {WRAPBG} url({IMGDIR}/oshr.png) no-repeat 5px 50%; }
@@ -506,7 +506,7 @@ CSS 写作注意事项：
 			.vt th, .vt td { vertical-align: top; }
 		.tfm th { padding-top: 9px; padding-right: 5px; width: 130px; }
 			.tfm th .rq { float: right; font-size: 14px; }
-			.tfm .pt, .tfm .px { margin-right: 3px; width: 330px;min-height: 32px; }
+			.tfm .pt, .tfm .px { margin-right: 3px; width: 330px;}
 		.tfm .c, .tfm .tedt, .m_c .tfm .tedt { width: 338px; }
 		.tfm .d { clear: both; margin: 5px 0; color: {LIGHTTEXT}; }
 			.tfm .d em { margin-left: 5px; color: red; }
@@ -1089,7 +1089,7 @@ CSS 写作注意事项：
 	.h_pop { min-width: 120px; border-top: none; }
 /* .txt 和 .textarea 属于旧的命名规范，待整理 by lushnis */.p_opt .txt, .p_opt .txtarea { margin: 5px 0; }
 
-	.p_pop .flbc, .p_pof .flbc { margin-right: 8px; margin-top: 4px; }
+	.p_pop .flbc, .p_pof .flbc { margin-right: 26px; margin-top: 10px; }
 
 /* 弹出层 以下 class 都可以分开写，单独定义，以便个性化 */
 	/* 四条边、四个角的公用样式 */
