@@ -141,7 +141,7 @@
 					<input type="hidden" name="formhash" value="{FORMHASH}" />
 					<input type="hidden" name="delthread" value="true" />
 
-					<table cellspacing="0" cellpadding="0">
+					<table class="c-tb" cellspacing="0" cellpadding="0">
 
 					<!--{if $list}-->
 						<!--{loop $list $stid $thread}-->
@@ -195,7 +195,7 @@
 								</td>
 								<!--{/if}-->
 
-								<td class="col-xs-2 text-center">
+								<td class="col-xs-2 text-center ">
 									<a href="forum.php?mod=viewthread&tid=$thread[tid]" class="xi2" target="_blank">$thread[replies]</a>
 									<em>/$thread[views]</em>
 								</td>
