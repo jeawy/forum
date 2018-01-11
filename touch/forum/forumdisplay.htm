@@ -41,7 +41,18 @@
 						
                      
                         <div class="nav_btn">
-                            <button class="spinner_btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">全部时间
+                            <button class="spinner_btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									{if $_GET['dateline'] == '86400'}
+									{lang last_1_days}
+									{elseif $_GET['dateline'] == '172800'}
+									{lang last_2_days}
+									{elseif $_GET['dateline'] == '2592000'}
+									{lang list_one_month}
+									{elseif $_GET['dateline'] == '7948800'} 
+									{lang list_three_month}
+									{else}
+									{lang all}{lang search_any_date}
+									{/if}
                                 <span class="caret all_caret"></span>
 							</button>
 							 
