@@ -6,10 +6,10 @@
 		<!--{else}-->
 			<div class="nfl" id="main_succeed" style="display: none">
 				<div class="f_c altw">
-					<div class="alert_right">
+					<div class="alert_right text-center">
 						<p id="succeedmessage"></p>
-						<p id="succeedlocation" class="alert_btnleft"></p>
-						<p class="alert_btnleft"><a id="succeedmessage_href">{lang message_forward}</a></p>
+						<p id="succeedlocation" class="alert_btnleft text-center"></p>
+						<p class="alert_btnleft text-center"><a id="succeedmessage_href">{lang message_forward}</a></p>
 					</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 		   <div class="text-center nf-wrap"><img src="{$_G['own_static_path']}/img/nf.png"></div>
 		<!--{/if}-->
 		<div class="f_c altw">
-			<div id="messagetext" class="$alerttype bi-none">
+			<div id="messagetext" class="$alerttype bi-none text-center">
 				<p class="orange text-center">
 					<!--{if $alerttype == 'alert_error'}-->
 					抱歉~指定的页面不存在! 
@@ -33,18 +33,18 @@
 				</p>
 				<!--{if $url_forward}-->
 					<!--{if !$param[redirectmsg]}-->
-						<p class="alert_btnleft"><a href="$url_forward">{lang message_forward}</a></p>
+						<p class="alert_btnleft text-center"><a href="$url_forward">{lang message_forward}</a></p>
 					<!--{else}-->
-						<p class="alert_btnleft"><a href="$url_forward">{lang attach_forward}</a></p>
+						<p class="alert_btnleft text-center"><a href="$url_forward">{lang attach_forward}</a></p>
 					<!--{/if}-->
 				<!--{elseif $allowreturn}-->
 
 				
 				<script type="text/javascript">
 					if(history.length > (BROWSER.ie ? 0 : 1)) {
-						document.write('<p class="alert_btnleft text-center"><a href="forum.php?">返回主页</a><a href="javascript:history.back()">返回上一页</a></p>');
+						document.write('<p class="alert_btnleft alert_c  text-center"><a href="forum.php?">返回主页</a><a href="javascript:history.back()">返回上一页</a></p>');
 					} else {
-						document.write('<p class="alert_btnleft text-center"><a href="./">[ $_G['setting']['bbname'] {lang homepage} ]</a></p>');
+						document.write('<p class="alert_btnleft alert_c text-center"><a href="./">[ $_G['setting']['bbname'] {lang homepage} ]</a></p>');
 					}
 				</script>
 				<!--{/if}-->
