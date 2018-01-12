@@ -452,8 +452,7 @@ CSS 写作注意事项：
 	Explain:		小尺寸的输入框和按钮样式。该样式在模板中保留，目前样式为空。
 	Last Modify:	Pony
 */
-	.pns .px {}
-	.pns .pn {}
+	
 
 /*
 	Name:			mod_float_typeid
@@ -468,7 +467,7 @@ CSS 写作注意事项：
 */
 .ftid { float: left; margin-right: 6px; }
 	.ftid select { float: left; height: 23px; }
-	.ftid a { display: block; overflow: hidden; padding: 0 17px 0 4px; height: 21px; line-height: 21px; text-decoration: none !important; font-size: 12px; font-weight: 400; color: {TABLETEXT} !important; border: 1px solid; border-color: {INPUTBORDERDARKCOLOR} {INPUTBORDER} {INPUTBORDER} {INPUTBORDERDARKCOLOR}; background: {WRAPBG} url({IMGDIR}/newarow.gif) no-repeat 100% 0; }
+	.ftid a { display: block; overflow: hidden; padding: 0 17px 0 4px; height: 21px; line-height: 21px; text-decoration: none !important; s font-weight: 400; color: {TABLETEXT} !important; border: 1px solid; border-color: {INPUTBORDERDARKCOLOR} {INPUTBORDER} {INPUTBORDER} {INPUTBORDERDARKCOLOR}; background: {WRAPBG} url({IMGDIR}/newarow.gif) no-repeat 100% 0; }
 		.ftid a:hover, .ftid a:focus { background-position: 100% -23px; }
 	/* ctrl 'select' width */
 	.ftid select { width: 94px; }
@@ -477,7 +476,7 @@ CSS 写作注意事项：
 
 .sltm { padding: 5px 11px 5px 10px; border: 1px solid {DROPMENUBORDER}; background-color: {WRAPBG}; text-align: left; }
 	.sltm li { padding: 2px 0; color: {MIDTEXT}; cursor: pointer; }
-		.sltm li:hover { color: rgb(234,80,20); }
+		.sltm li:hover { color: rgb(234,80,20)!important; }
 		.sltm li.current { color: {NOTICETEXT}; }
 
 /* 分享按钮 */ .oshr { float: right; margin-left: 5px; padding: 0 5px 0 22px; border: 1px solid; border-color: #CCC #A9A9A9 #A9A9A9 #CCC; background: {WRAPBG} url({IMGDIR}/oshr.png) no-repeat 5px 50%; }

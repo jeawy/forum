@@ -225,14 +225,14 @@
 							<!--{/loop}-->
 						<!--{else}-->
 						<div class="pm">
-							<!--{if $_G[inajax]}--><span class="pull-right"><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
-							<h3 class="flb clearfix">
+							<div class="chat_title clearfix">
 								{lang taking_with_user}<!--{if $online}-->[{lang online}]<!--{else}-->[{lang offline}]<!--{/if}-->
-								
-							</h3>
-							<div class="pm_tac   cl">
+								<!--{if $_G[inajax]}--><span class="pull-right"><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="close_c" title="{lang close}">
+									<img src="{$_G['own_static_path']}/img/icon/close.svg" />
+								</a></span><!--{/if}-->
+							</div>
+							<div class="chat_record clearfix">
 								<a href="home.php?mod=space&do=pm&subop=view&touid={$touid}#last" class="y" target="_blank">{lang view_with_sb_chat}</a>
-								
 							</div>
 						 
 							<div class="c">
