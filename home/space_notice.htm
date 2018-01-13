@@ -1,7 +1,11 @@
 <!--{eval $_G['home_tpl_titles'] = array('{lang remind}');}-->
 <!--{template common/header}-->
 <link rel="stylesheet" href="{$_G['own_static_path']}/css/information.css">
- 
+ <style>
+	 .nts dl:last-child{
+		 border-bottom: none;
+	 }
+ </style>
 <section class="container">
 		
         <div class="row">
@@ -59,7 +63,7 @@
 												<!--{/if}-->
 											</dd>
 											<dt>
-												<a class="d b" href="home.php?mod=spacecp&ac=common&op=ignore&authorid=$value[authorid]&type=$value[type]&handlekey=addfriendhk_{$value[authorid]}" id="a_note_$value[id]" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang shield}">{lang shield}</a>
+												<!--<a class="d b" href="home.php?mod=spacecp&ac=common&op=ignore&authorid=$value[authorid]&type=$value[type]&handlekey=addfriendhk_{$value[authorid]}" id="a_note_$value[id]" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang shield}">{lang shield}</a>-->
 												<span class="xg1 xw0"><!--{date($value[dateline], 'u')}--></span>
 											</dt>
 											<dd class="ntc_body" style="$value[style]">
