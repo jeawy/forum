@@ -270,7 +270,7 @@ CSS 写作注意事项：
 	Last Modify:	lushnis
 */
 	.mtn { margin-top: 5px !important; margin-right: 5px !important; }
-	.mtm { margin-top: 10px !important; }
+	.mtm { margin-top: 15px !important; }
 	.mbm { margin-bottom: 10px !important; }
 	.mtw { margin-top: 20px !important; }
 	.mbw { margin-bottom: 20px !important; }
@@ -1063,7 +1063,7 @@ CSS 写作注意事项：
 		.ie6 .p_pop { width: 100px; }
 		.p_pof .p_pop { padding: 0; border: none; box-shadow: none; }
 		.p_pof { width: 500px; }
-		.p_opt { padding: 10px 0 0 10px;}
+		.p_opt { padding: 10px 0 0 0;}
 		.p_pop li { display: inline; }
 		.p_pop a { display: block; padding: 3px 5px; white-space: nowrap; }
 			.p_pop li:last-child a { border: none; }
@@ -1088,7 +1088,7 @@ CSS 写作注意事项：
 	.h_pop { min-width: 120px; border-top: none; }
 /* .txt 和 .textarea 属于旧的命名规范，待整理 by lushnis */.p_opt .txt, .p_opt .txtarea { margin: 5px 0; }
 
-	.p_pop .flbc, .p_pof .flbc { margin-right: 26px; margin-top: 10px; }
+
 
 /* 弹出层 以下 class 都可以分开写，单独定义，以便个性化 */
 	/* 四条边、四个角的公用样式 */
@@ -1126,8 +1126,8 @@ CSS 写作注意事项：
 		.flb span { float: right; color: {LIGHTTEXT}; }
 			.flb span a, .flb strong { float: left; text-decoration: none; margin-left: 8px; font-weight: 400; color: {LINK}; }
 				.flb span a:hover { color: {LIGHTTEXT}; }
-			.flbc { float: left; width: 20px; height: 20px; overflow: hidden; text-indent: -9999px; background: url({IMGDIR}/cls.gif) no-repeat 0 0; cursor: pointer; }
-				.flbc:hover { background-position: 0 -20px; }
+			.flbc { float: left; width: 20px; height: 20px; overflow: hidden; text-indent: -9999px; background: url({IMGDIR}/cls.gif) no-repeat 0 -20px; cursor: pointer; }
+
 
 			.floatwrap { overflow: auto; overflow-x: hidden; margin-bottom: 10px; height: 280px; }
 
