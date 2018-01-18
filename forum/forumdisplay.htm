@@ -41,7 +41,7 @@
 			</style>
 
 		    <div class="left_nav">  
-				<!-- {if $_G[fid] == 39} -->
+				<!-- {if $_G[fid] == 59} -->
 			<div class="left_title"> 
 					<div class="title_img">
 						<span>
@@ -60,7 +60,7 @@
 				</a>
 				</div>
 			<!-- {/if} -->
-				<!-- {if $_G[fid] == 37} -->
+				<!-- {if $_G[fid] == 58} -->
 					<div class="left_title"> 
 						<div class="title_img">
 							<span>
@@ -79,27 +79,27 @@
 					</a>
 					</div>
 				<!-- {/if} -->
-				
-				<!--{if ($_G['forum']['threadtypes'] && $_G['forum']['threadtypes']['listable']) || count($_G['forum']['threadsorts']['types']) > 0}-->
 				<!-- {if $_G[fid] == 38} -->
-						<div class="left_title">
-								<div class="title_img">
-									<span>
-										<img src="{$_G['own_static_path']}/img/activity.png" />
-									</span>
-									<i class="cast2_title h1">活动</i>
-								</div>
-								<!-- 主体右侧发帖按钮**开始 -->
-					<a href="javascript:;" id="newspecial" 
-					onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"
-					{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} 
-					onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"
-					{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"
-					{/if} title="{lang send_posts}" class="posted-btn"> 
-						<img class="pencil" src="{$_G['own_static_path']}/img/pencil.svg" alt="edit">发帖
-					</a>
-				</div>
-			<!-- {/if} -->
+								<div class="left_title">
+									<div class="title_img">
+										<span>
+											<img src="{$_G['own_static_path']}/img/activity.png" />
+										</span>
+										<i class="cast2_title h1">活动</i>
+									</div>
+									<!-- 主体右侧发帖按钮**开始 -->
+						<a href="javascript:;" id="newspecial" 
+						onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"
+						{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} 
+						onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"
+						{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"
+						{/if} title="{lang send_posts}" class="posted-btn"> 
+							<img class="pencil" src="{$_G['own_static_path']}/img/pencil.svg" alt="edit">发帖
+						</a>
+					</div>
+				<!-- {/if} -->
+				<!--{if ($_G['forum']['threadtypes'] && $_G['forum']['threadtypes']['listable']) || count($_G['forum']['threadsorts']['types']) > 0}-->
+						
 
 			
 						<ul id="thread_types" class=" nav nav-tabs"><!-- sivan板块菜单 -->
