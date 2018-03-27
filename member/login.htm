@@ -15,10 +15,7 @@
 	<div class="mn" id="main_message">
 		<div class="bm">
 			<div class="hot-posted">
-				<span class="y">
-					<!--{hook/logging_side_top}-->
-					<a href="member.php?mod={$_G[setting][regname]}" class="xi2">{lang login_guest}</a>
-				</span>
+				 
 				<!--{if !$secchecklogin2}-->
 					<div class="xs2">{lang login}</div>
 				<!--{else}-->
@@ -74,7 +71,10 @@
 								<!--{/if}-->
 							</th>
 							<td><input type="text" name="username" id="username_$loginhash" autocomplete="off" size="30" class="px p_fre" tabindex="1" value="$username" /></td>
-							<td class="tipcol"><a href="member.php?mod={$_G[setting][regname]}">$_G['setting']['reglinkname']</a></td>
+							<td class="tipcol">
+									<a target="__blank" href="$_G['registerurl']?next=$_SERVER['HTTP_HOST']">$_G['setting']['reglinkname']</a>
+								<!--<a href="member.php?mod={$_G[setting][regname]}">$_G['setting']['reglinkname']ssssssssssss</a>-->
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -138,7 +138,9 @@
 						<tr>
 							<th>&nbsp;</th>
 							<td>
-								<button class="pn pnc" type="submit" name="loginsubmit" value="true" tabindex="1"><strong>{lang login}</strong></button>
+								<button class="pn pnc" type="submit" name="loginsubmit" value="true" tabindex="1"><strong>论坛老用户{lang login}</strong></button>
+							 
+							<button class="pn pnc" type="submit" id="newsyslogin" onclick="newuserlogin()" value="true" tabindex="1"><strong>新用户登录</strong></button>
 							</td>
 							<td>
 								<!--{if $this->setting['sitemessage'][login] && empty($_GET['infloat'])}--><a href="javascript:;" id="custominfo_login_$loginhash" class="y">&nbsp;<img src="{IMGDIR}/info_small.gif" alt="{lang faq}" class="vm" /></a><!--{/if}-->
@@ -252,7 +254,12 @@
 	$('lostpw_email').focus();
 <!--{/if}-->
 </script>
-
+<script>
+	function newuserlogin(){
+		window.location.href = "$_G['loginurl']?next=$_SERVER['HTTP_HOST']";
+		 
+	}
+</script>
 <!--{eval updatesession();}-->
 <!--{if empty($_GET['infloat'])}-->
 	</div></div></div></div>
