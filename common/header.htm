@@ -79,7 +79,10 @@
 					<!--{if $_G['uid']==0 }-->
 						<li>
 							<div class="login_holder">
-								<a href="member.php?mod=logging&action=login">登录</a><a class="menu-reply" href="member.php?mod=register">注册</a>
+							<!--	<a href="member.php?mod=logging&action=login">登录</a><a class="menu-reply" href="member.php?mod=register">注册</a>-->
+							<a href="$_G['oauth']/users/login/?appid=$_G['appid']&redirect_url=$_G['bbs']/oauth2.php">登录</a>
+							<a class="menu-reply" href="$_G['registerurl']">注册</a>
+							
 							</div>
 						</li>
 					<!--{/if}-->
